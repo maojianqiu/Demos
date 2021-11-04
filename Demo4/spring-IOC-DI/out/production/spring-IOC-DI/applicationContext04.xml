@@ -18,5 +18,19 @@
     其作用是告诉Spring，bean都放在com.how2java.pojo这个包下
         需要再注入的类上加上 @Component("p")-->
     <context:component-scan base-package="com.how2java"/>
- 
+
+    <bean name="s" class="com.how2java.service.ProductService">
+    </bean>
+
+    <bean id="loggerAspect" class="com.how2java.aspect.LoggerAspect"/>
+
+    <aop:config>
+        <aop:pointcut id="loggerCutpoint"
+                      expression=
+                              "execution(* com.how2java.service.ProductService.*(..)) "/>
+
+        <aop:aspect id="logAspect" ref="loggerAspect">
+            <aop:around pointcut-ref="loggerCutpoint" method="log"/>
+        </aop:aspect>
+    </aop:config>
 </beans>

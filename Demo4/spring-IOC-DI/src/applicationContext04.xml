@@ -23,4 +23,14 @@
     </bean>
 
     <bean id="loggerAspect" class="com.how2java.aspect.LoggerAspect"/>
+
+    <aop:config>
+        <aop:pointcut id="loggerCutpoint"
+                      expression=
+                              "execution(* com.how2java.service.ProductService.*(..)) "/>
+
+        <aop:aspect id="logAspect" ref="loggerAspect">
+            <aop:around pointcut-ref="loggerCutpoint" method="log"/>
+        </aop:aspect>
+    </aop:config>
 </beans>
