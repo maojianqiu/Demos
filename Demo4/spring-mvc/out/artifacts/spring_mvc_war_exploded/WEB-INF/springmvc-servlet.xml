@@ -16,4 +16,15 @@
         </property>
     </bean>
     <bean id="indexController" class="controller.IndexController"></bean>
+
+    <!-- 其作用是把视图约定在 /WEB-INF/page/*.jsp 这个位置
+        ModelAndView mav = new ModelAndView("index"); //不用加 .jsp
+        把index.jsp移动到 WEB-INF/page 目录下
+    -->
+
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/page/" />
+        <property name="suffix" value=".jsp" />
+    </bean>
+
 </beans>
