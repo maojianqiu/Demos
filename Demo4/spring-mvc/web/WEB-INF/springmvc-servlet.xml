@@ -1,30 +1,59 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<!--<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">-->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd
+    http://www.springframework.org/schema/mvc
+     http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
 
-<beans>
-    <bean id="simpleUrlHandlerMapping"
-          class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
-        <property name="mappings">
-            <value>
-                /index=indexController
-                <!--可以在这里添加更多的映射-->
-                <!--格式/xxx=xxx 有无加斜杠无没有影响-->
-            </value>
-            <!--<props>-->
-                <!--<prop key="/index">indexController</prop>-->
-            <!--</props>-->
-        </property>
-    </bean>
-    <bean id="indexController" class="controller.IndexController"></bean>
+<!--    <bean id="simpleUrlHandlerMapping"-->
+<!--          class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">-->
+<!--        <property name="mappings">-->
+<!--            <value>-->
+<!--                /index=indexController-->
+<!--                &lt;!&ndash;可以在这里添加更多的映射&ndash;&gt;-->
+<!--                &lt;!&ndash;格式/xxx=xxx 有无加斜杠无没有影响&ndash;&gt;-->
+<!--            </value>-->
+<!--            &lt;!&ndash;<props>&ndash;&gt;-->
+<!--                &lt;!&ndash;<prop key="/index">indexController</prop>&ndash;&gt;-->
+<!--            &lt;!&ndash;</props>&ndash;&gt;-->
+<!--        </property>-->
+<!--    </bean>-->
+<!--    <bean id="indexController" class="controller.IndexController"></bean>-->
 
-    <!-- 其作用是把视图约定在 /WEB-INF/page/*.jsp 这个位置
-        ModelAndView mav = new ModelAndView("index"); //不用加 .jsp
-        把index.jsp移动到 WEB-INF/page 目录下
+    <!-- 1.其作用是把视图约定在 /WEB-INF/page/*.jsp 这个位置
+        2.ModelAndView mav = new ModelAndView("index"); //不用加 .jsp
+        3.把index.jsp移动到 WEB-INF/page 目录下
     -->
-
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/page/" />
         <property name="suffix" value=".jsp" />
     </bean>
 
+
+    <!--  注解方式：
+        不需要上方的 simpleUrlHandlerMapping bean 了
+        1.扫描包
+        2.@Controller ,并且不要 implements Controller ,只有 @Controller才能使 @RequestMapping生效，否则访问链接无效
+        3.@RequestMapping
+    -->
+    <context:component-scan base-package="controller" />
+
+    <!--  开放对上传功能的支持  -->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"/>
+
+    <!--拦截器-->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/index"/>
+            <!-- 定义在mvc:interceptor下面的表示是对特定的请求才进行拦截的 -->
+            <bean class="interceptor.IndexInterceptor"/>
+        </mvc:interceptor>
+        <!-- 当设置多个拦截器时，先按顺序调用preHandle方法，然后逆序调用每个拦截器的postHandle和afterCompletion方法 -->
+    </mvc:interceptors>
 </beans>

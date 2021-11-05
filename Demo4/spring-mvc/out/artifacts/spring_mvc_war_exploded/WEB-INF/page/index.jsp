@@ -11,6 +11,10 @@
     <title>{{message}}</title>
   </head>
   <body>
-  {{message}}
+  ${message}
+
+  <br>
+
+  <p>${date}</p>
   </body>
 </html>
