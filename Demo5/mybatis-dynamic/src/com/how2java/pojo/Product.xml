@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	<mapper namespace="com.how2java.pojo">
+	<select id="listProduct" resultType="Product">
+		select * from product_
+		<if test="name!=null">
+			where name like concat('%',#{name},'%')
+		</if>
+	</select>
+
+	<select id="listProduct3" resultType="Product">
+		select * from product_
+		<where>
+			<if test="name!=null">
+				and name like concat('%',#{name},'%')
+			</if>
+			<if test="price!=null and price!=0">
+				and price > #{price}
+			</if>
+		</where>
+	</select>
+
+	<update id="updateProduct" parameterType="Product" >
+		update product_
+		<set>
+			<if test="name != null">name=#{name},</if>
+			<if test="price != null">price=#{price}</if>
+		</set>
+		where id=#{id}
+	</update>
+
+
+<!--
+属性	描述
+prefix	给sql语句拼接的前缀
+suffix	给sql语句拼接的后缀
+prefixOverrides	去除sql语句前面的关键字或者字符，该关键字或者字符由prefixOverrides属性指定，假设该属性指定为"AND"，当sql语句的开头为"AND"，trim标签将会去除该"AND"
+suffixOverrides	去除sql语句后面的关键字或者字符，该关键字或者字符由suffixOverrides属性指定
+-->
+
+<!--	<select id="listProduct" resultType="Product">-->
+<!--		select * from product_-->
+<!--		<trim prefix="WHERE" prefixOverrides="AND |OR ">-->
+<!--			<if test="name!=null">-->
+<!--				and name like concat('%',#{name},'%')-->
+<!--			</if>-->
+<!--			<if test="price!=null and price!=0">-->
+<!--				and price > #{price}-->
+<!--			</if>-->
+<!--		</trim>-->
+<!--	</select>-->
+
+<!--	<update id="updateProduct" parameterType="Product" >-->
+<!--		update product_-->
+<!--		<trim prefix="SET" suffixOverrides=",">-->
+<!--			<if test="name != null">name=#{name},</if>-->
+<!--			<if test="price != null">price=#{price}</if>-->
+
+<!--		</trim>-->
+
+<!--		where id=#{id}-->
+<!--	</update>-->
+
+
+
+<!--Mybatis里面没有else标签，但是可以使用when otherwise标签来达到这样的效果。-->
+<!--	<select id="listProduct" resultType="Product">-->
+<!--		SELECT * FROM product_-->
+<!--		<where>-->
+<!--			<choose>-->
+<!--				<when test="name != null">-->
+<!--					and name like concat('%',#{name},'%')-->
+<!--				</when>-->
+<!--				<when test="price !=null and price != 0">-->
+<!--					and price > #{price}-->
+<!--				</when>-->
+<!--				<otherwise>-->
+<!--					and id >1-->
+<!--				</otherwise>-->
+<!--			</choose>-->
+<!--		</where>-->
+<!--	</select>-->
+
+
+
+<!--
+collection: 要做foreach的对象，作为入参时，List对象默认用"list"代替作为键，数组对象有"array"代替作为键，Map对象没有默认的键。当然在作为入参时可以使用@Param("keyName")来设置键，设置keyName后，list,array将会失效。 除了入参这种情况外，还有一种作为参数对象的某个字段的时候。举个例子：如果User有属性List ids。入参是User对象，那么这个collection = "ids".如果User有属性Ids ids;其中Ids是个对象，Ids有个属性List id;入参是User对象，那么collection = "ids.id"
+-->
+<!--	<select id="listProduct" resultType="Product">-->
+<!--		SELECT * FROM product_-->
+<!--		WHERE ID in-->
+<!--		<foreach item="item" index="index" collection="list"-->
+<!--				 open="(" separator="," close=")">-->
+<!--			#{item}-->
+<!--		</foreach>-->
+<!--	</select>-->
+
+
+
+	<!-- 本来的模糊查询方式 -->
+	<!--         <select id="listProduct" resultType="Product"> -->
+	<!--             select * from   product_  where name like concat('%',#{0},'%') -->
+	<!--         </select> -->
+
+<!--	<select id="listProduct" resultType="Product">-->
+<!--		<bind name="likename" value="'%' + name + '%'" />-->
+<!--		select * from   product_  where name like #{likename}-->
+<!--	</select>-->
+
+
+	</mapper>
