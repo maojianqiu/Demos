@@ -4,11 +4,12 @@
          xmlns:web="http://java.sun.com/xml/ns/javaee" 
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	
-	<!-- spring的配置文件-->
+	<!-- spring的配置文件  实例化spring的web容器-->
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>classpath:applicationContext.xml</param-value>
 	</context-param>
+	<!--在web容器启动的时候，容器会调用**contextInitialized()**方法。spring-web实现的-->
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
