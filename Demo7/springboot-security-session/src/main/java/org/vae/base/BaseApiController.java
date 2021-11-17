@@ -1,11 +1,11 @@
 package org.vae.base;
 
 
-import com.mindskip.xzs.context.WebContext;
-import com.mindskip.xzs.domain.User;
-import com.mindskip.xzs.utility.ModelMapperSingle;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.vae.context.WebContext;
+import org.vae.domain.User;
+import org.vae.utility.ModelMapperSingle;
 
 /**
  * @version 3.3.0

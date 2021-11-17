@@ -1,9 +1,9 @@
 package org.vae.configuration.spring.security;
 
-import com.mindskip.xzs.base.SystemCode;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.authentication.LoginUrlAuthenticationEntryPoint;
 import org.springframework.stereotype.Component;
+import org.vae.base.SystemCode;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;

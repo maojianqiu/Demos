@@ -1,7 +1,5 @@
 package org.vae.configuration.spring.security;
 
-import com.mindskip.xzs.domain.enums.RoleEnum;
-import com.mindskip.xzs.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -10,6 +8,8 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
+import org.vae.domain.enums.RoleEnum;
+import org.vae.service.UserService;
 
 import java.util.ArrayList;
 
@@ -31,7 +31,7 @@ public class RestDetailsServiceImpl implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
-        com.mindskip.xzs.domain.User user = userService.getUserByUserName(username);
+        org.vae.domain.User user = userService.getUserByUserName(username);
 
         if (user == null) {
             throw new UsernameNotFoundException("Username  not found.");

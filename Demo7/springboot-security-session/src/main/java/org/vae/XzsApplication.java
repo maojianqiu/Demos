@@ -1,5 +1,6 @@
 package org.vae;
 
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
@@ -12,10 +13,10 @@ import org.vae.configuration.property.SystemConfig;
 @SpringBootApplication
 @EnableTransactionManagement
 @EnableConfigurationProperties(value = { SystemConfig.class})
-public class App 
+public class XzsApplication
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        SpringApplication.run(XzsApplication.class, args);
     }
 }

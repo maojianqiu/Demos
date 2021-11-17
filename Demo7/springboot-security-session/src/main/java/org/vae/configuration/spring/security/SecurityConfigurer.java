@@ -1,7 +1,5 @@
 package org.vae.configuration.spring.security;
 
-import com.mindskip.xzs.configuration.property.SystemConfig;
-import com.mindskip.xzs.domain.enums.RoleEnum;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -12,6 +10,8 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+import org.vae.configuration.property.SystemConfig;
+import org.vae.domain.enums.RoleEnum;
 
 import java.util.Collections;
 import java.util.List;

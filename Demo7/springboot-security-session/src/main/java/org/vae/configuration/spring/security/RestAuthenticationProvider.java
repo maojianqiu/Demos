@@ -1,11 +1,6 @@
 package org.vae.configuration.spring.security;
 
 
-import com.mindskip.xzs.context.WebContext;
-import com.mindskip.xzs.domain.enums.RoleEnum;
-import com.mindskip.xzs.domain.enums.UserStatusEnum;
-import com.mindskip.xzs.service.AuthenticationService;
-import com.mindskip.xzs.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.BadCredentialsException;
@@ -18,6 +13,11 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
+import org.vae.context.WebContext;
+import org.vae.domain.enums.RoleEnum;
+import org.vae.domain.enums.UserStatusEnum;
+import org.vae.service.AuthenticationService;
+import org.vae.service.UserService;
 
 import java.util.ArrayList;
 
@@ -47,7 +47,7 @@ public class RestAuthenticationProvider implements AuthenticationProvider {
         String username = authentication.getName();
         String password = (String) authentication.getCredentials();
 
-        com.mindskip.xzs.domain.User user = userService.getUserByUserName(username);
+        org.vae.domain.User user = userService.getUserByUserName(username);
         if (user == null) {
             throw new UsernameNotFoundException("用户名或密码错误");
         }
