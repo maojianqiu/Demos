@@ -1,4 +1,4 @@
-package com.mindskip.xzs.configuration.property;
+package org.vae.configuration.property;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
@@ -16,7 +16,7 @@ public class SystemConfig {
 
     private PasswordKeyConfig pwdKey;
     private List<String> securityIgnoreUrls;
-    private WxConfig wx;
+//    private WxConfig wx;
     private QnConfig qn;
 
     public PasswordKeyConfig getPwdKey() {
@@ -35,13 +35,13 @@ public class SystemConfig {
         this.securityIgnoreUrls = securityIgnoreUrls;
     }
 
-    public WxConfig getWx() {
-        return wx;
-    }
+//    public WxConfig getWx() {
+//        return wx;
+//    }
 
-    public void setWx(WxConfig wx) {
-        this.wx = wx;
-    }
+//    public void setWx(WxConfig wx) {
+//        this.wx = wx;
+//    }
 
     public QnConfig getQn() {
         return qn;

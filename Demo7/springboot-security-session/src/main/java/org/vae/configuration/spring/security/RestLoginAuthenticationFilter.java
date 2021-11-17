@@ -1,7 +1,6 @@
-package com.mindskip.xzs.configuration.spring.security;
+package org.vae.configuration.spring.security;
 
 import com.mindskip.xzs.configuration.property.CookieConfig;
-
 import com.mindskip.xzs.utility.JsonUtil;
 import org.slf4j.LoggerFactory;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

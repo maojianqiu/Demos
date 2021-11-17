@@ -1,4 +1,4 @@
-package com.mindskip.xzs.configuration.spring.security;
+package org.vae.configuration.spring.security;
 
 import com.mindskip.xzs.base.SystemCode;
 import org.springframework.security.core.AuthenticationException;

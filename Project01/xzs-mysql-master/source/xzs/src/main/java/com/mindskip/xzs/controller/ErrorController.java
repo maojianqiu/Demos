@@ -15,6 +15,9 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.Map;
 
+/*
+* SpringBoot的默认异常处理映射为“/error”。BasicErrorController已经默认实现了“text/html”的处理，如果想返回自定义JSON格式信息，则实现“ErrorController ”接口，增加一个produces 为“application/json”的方法即可，如：
+* */
 @RestController
 public class ErrorController extends BasicErrorController {
 

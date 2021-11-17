@@ -1,6 +1,5 @@
-package com.mindskip.xzs.configuration.spring.security;
+package org.vae.configuration.spring.security;
 
-import com.mindskip.xzs.configuration.property.CookieConfig;
 import com.mindskip.xzs.configuration.property.SystemConfig;
 import com.mindskip.xzs.domain.enums.RoleEnum;
 import org.springframework.beans.factory.annotation.Autowired;
