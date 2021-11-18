@@ -20,9 +20,6 @@ public class DynamicAccessDecisionManager implements AccessDecisionManager {
     @Override
     public void decide(Authentication authentication, Object object,
                        Collection<ConfigAttribute> configAttributes) throws AccessDeniedException, InsufficientAuthenticationException {
-        System.out.println("DynamicAccessDecisionManager : " + CollUtil.isEmpty(configAttributes));
-        System.out.println("DynamicAccessDecisionManager : " + configAttributes.toString());
-        System.out.println("DynamicAccessDecisionManager : " + authentication.getAuthorities().toString());
         // 当接口未被配置资源时直接放行
         if (CollUtil.isEmpty(configAttributes)) {
             return;

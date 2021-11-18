@@ -19,6 +19,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.access.intercept.FilterSecurityInterceptor;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
+import java.util.List;
+
 
 /**
  * 对SpringSecurity的配置的扩展，支持自定义白名单资源路径和查询用户逻辑
@@ -36,10 +38,15 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
         ExpressionUrlAuthorizationConfigurer<HttpSecurity>.ExpressionInterceptUrlRegistry registry = httpSecurity
                 .authorizeRequests();
-        //不需要保护的资源路径允许访问
-        for (String url : ignoreUrlsConfig().getUrls()) {
-            registry.antMatchers(url).permitAll();
-        }
+        //不需要保护的资源路径允许访问 方式一
+//        for (String url : ignoreUrlsConfig().getUrls()) {
+//            registry.antMatchers(url).permitAll();
+//        }
+        //不需要保护的资源路径允许访问 方式二
+        List<String> securityIgnoreUrls = ignoreUrlsConfig().getUrls();
+        String[] ignores = new String[securityIgnoreUrls.size()];
+        registry.antMatchers(securityIgnoreUrls.toArray(ignores)).permitAll();
+
         //允许跨域请求的OPTIONS请求
         registry.antMatchers(HttpMethod.OPTIONS)
                 .permitAll();
@@ -52,16 +59,22 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .csrf()
                 .disable()
-                .sessionManagement()
-                .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+//                .sessionManagement()
+                /*
+                 * Spring Security下的枚举SessionCreationPolicy,管理session的创建策略
+                 * STATELES
+                 * Spring Security永远不会创建HttpSession，它不会使用HttpSession来获取SecurityContext
+                 */
+//                .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 // 自定义权限拒绝处理类
-                .and()
+//                .and()
                 .exceptionHandling()
                 .accessDeniedHandler(restfulAccessDeniedHandler())
                 .authenticationEntryPoint(restAuthenticationEntryPoint())
+                .and().logout().logoutUrl("/admin/logout").invalidateHttpSession(true);
                 // 自定义权限拦截器JWT过滤器
-                .and()
-                .addFilterBefore(jwtAuthenticationTokenFilter(), UsernamePasswordAuthenticationFilter.class);
+//                .and()
+//                .addFilterBefore(jwtAuthenticationTokenFilter(), UsernamePasswordAuthenticationFilter.class);
         //有动态权限配置时添加动态权限校验过滤器
         if (dynamicSecurityService != null) {
             registry.and().addFilterBefore(dynamicSecurityFilter(), FilterSecurityInterceptor.class);
@@ -79,16 +92,16 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         return new BCryptPasswordEncoder();
     }
 
-    @Bean
-    public JwtAuthenticationTokenFilter jwtAuthenticationTokenFilter() {
-        return new JwtAuthenticationTokenFilter();
-    }
+//    @Bean
+//    public JwtAuthenticationTokenFilter jwtAuthenticationTokenFilter() {
+//        return new JwtAuthenticationTokenFilter();
+//    }
 
-    @Bean
-    @Override
-    public AuthenticationManager authenticationManagerBean() throws Exception {
-        return super.authenticationManagerBean();
-    }
+//    @Bean
+//    @Override
+//    public AuthenticationManager authenticationManagerBean() throws Exception {
+//        return super.authenticationManagerBean();
+//    }
 
     @Bean
     public RestfulAccessDeniedHandler restfulAccessDeniedHandler() {
