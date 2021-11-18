@@ -14,6 +14,11 @@ import org.vae.utility.ErrorUtil;
 
 import java.util.stream.Collectors;
 
+/*
+* @ControllerAdvice是Spring提供的Controller级的异常拦截注解，通过它可以实现全局异常拦截。
+* 若在controller中出异常了会找到对应的错误处理方法，若没有则使用springboot统一的 /error 处理。
+* */
+
 @ControllerAdvice
 public class ExceptionHandle {
     private final static Logger logger = LoggerFactory.getLogger(ExceptionHandle.class);

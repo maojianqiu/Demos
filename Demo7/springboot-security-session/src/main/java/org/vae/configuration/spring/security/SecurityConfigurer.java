@@ -38,7 +38,9 @@ public class SecurityConfigurer {
         private final RestAccessDeniedHandler restAccessDeniedHandler;
 
         @Autowired
-        public FormLoginWebSecurityConfigurerAdapter(SystemConfig systemConfig, LoginAuthenticationEntryPoint restAuthenticationEntryPoint, RestAuthenticationProvider restAuthenticationProvider, RestDetailsServiceImpl formDetailsService, RestAuthenticationSuccessHandler restAuthenticationSuccessHandler, RestAuthenticationFailureHandler restAuthenticationFailureHandler, RestLogoutSuccessHandler restLogoutSuccessHandler, RestAccessDeniedHandler restAccessDeniedHandler) {
+        public FormLoginWebSecurityConfigurerAdapter(SystemConfig systemConfig, LoginAuthenticationEntryPoint restAuthenticationEntryPoint,
+                                                     RestAuthenticationProvider restAuthenticationProvider,
+                                                     RestDetailsServiceImpl formDetailsService, RestAuthenticationSuccessHandler restAuthenticationSuccessHandler, RestAuthenticationFailureHandler restAuthenticationFailureHandler, RestLogoutSuccessHandler restLogoutSuccessHandler, RestAccessDeniedHandler restAccessDeniedHandler) {
             this.systemConfig = systemConfig;
             this.restAuthenticationEntryPoint = restAuthenticationEntryPoint;
             this.restAuthenticationProvider = restAuthenticationProvider;
@@ -62,9 +64,7 @@ public class SecurityConfigurer {
             String[] ignores = new String[securityIgnoreUrls.size()];
             http
                     .addFilterAt(authenticationFilter(), UsernamePasswordAuthenticationFilter.class)
-                    .exceptionHandling().authenticationEntryPoint(restAuthenticationEntryPoint)
-                    //添加认证管理器
-                    .and()
+
                     .authenticationProvider(restAuthenticationProvider)
                     .authorizeRequests()
                     .antMatchers(securityIgnoreUrls.toArray(ignores)).permitAll()
@@ -73,6 +73,9 @@ public class SecurityConfigurer {
                     .anyRequest().permitAll()
                     .and().exceptionHandling().accessDeniedHandler(restAccessDeniedHandler)
                     .and().formLogin().successHandler(restAuthenticationSuccessHandler).failureHandler(restAuthenticationFailureHandler)
+                    .and()
+                    .exceptionHandling().authenticationEntryPoint(restAuthenticationEntryPoint)
+                    //添加认证管理器
                     .and().logout().logoutUrl("/api/user/logout").logoutSuccessHandler(restLogoutSuccessHandler).invalidateHttpSession(true)
 //                    .and().rememberMe().key(CookieConfig.getName()).tokenValiditySeconds(CookieConfig.getInterval()).userDetailsService(formDetailsService)
                     .and().csrf().disable()

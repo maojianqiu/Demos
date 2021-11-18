@@ -44,7 +44,6 @@ public class RestLoginAuthenticationFilter extends AbstractAuthenticationProcess
             //从请求中获取参数
             //AuthenticationBean 自定义的，用于接收参数
             AuthenticationBean authenticationBean = JsonUtil.toJsonObject(is, AuthenticationBean.class);
-            System.out.println(authenticationBean.getUserName());
             request.setAttribute(TokenBasedRememberMeServices.DEFAULT_PARAMETER, authenticationBean.isRemember());
             //我不知道用户名密码是不是对的，所以构造一个未认证的Token先
             authRequest = new UsernamePasswordAuthenticationToken(authenticationBean.getUserName(), authenticationBean.getPassword());
