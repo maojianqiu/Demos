@@ -1,0 +1,2 @@
+2021-11-19 16:55:01.535  INFO 10860 --- [main] org.vae.XzsApplication                   : Starting XzsApplication on SKY-20210218KET with PID 10860 (E:\PycharmProjects\demo\Demo7\springboot-security-session\target\classes started by Administrator in E:\PycharmProjects\demo\Demo7\springboot-security-session)
+2021-11-19 16:55:01.539  INFO 10860 --- [main] org.vae.XzsApplication                   : The following profiles are active: dev
