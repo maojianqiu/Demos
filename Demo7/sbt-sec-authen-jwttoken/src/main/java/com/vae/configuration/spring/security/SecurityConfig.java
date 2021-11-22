@@ -36,24 +36,14 @@ public class SecurityConfig {
 
         private final SystemConfig systemConfig;
         private final LoginAuthenticationEntryPoint restAuthenticationEntryPoint;
-        private final RestAuthenticationProvider restAuthenticationProvider;
-//        private final RestDetailsServiceImpl formDetailsService;
-        private final RestAuthenticationSuccessHandler restAuthenticationSuccessHandler;
-        private final RestAuthenticationFailureHandler restAuthenticationFailureHandler;
         private final RestLogoutSuccessHandler restLogoutSuccessHandler;
         private final RestAccessDeniedHandler restAccessDeniedHandler;
 
         @Autowired
         public FormLoginWebSecurityConfigurerAdapter(SystemConfig systemConfig, LoginAuthenticationEntryPoint restAuthenticationEntryPoint,
-                                                     RestAuthenticationProvider restAuthenticationProvider,
-//                                                     RestDetailsServiceImpl formDetailsService,
-                                                     RestAuthenticationSuccessHandler restAuthenticationSuccessHandler, RestAuthenticationFailureHandler restAuthenticationFailureHandler, RestLogoutSuccessHandler restLogoutSuccessHandler, RestAccessDeniedHandler restAccessDeniedHandler) {
+                                                      RestLogoutSuccessHandler restLogoutSuccessHandler, RestAccessDeniedHandler restAccessDeniedHandler) {
             this.systemConfig = systemConfig;
             this.restAuthenticationEntryPoint = restAuthenticationEntryPoint;
-            this.restAuthenticationProvider = restAuthenticationProvider;
-//            this.formDetailsService = formDetailsService;
-            this.restAuthenticationSuccessHandler = restAuthenticationSuccessHandler;
-            this.restAuthenticationFailureHandler = restAuthenticationFailureHandler;
             this.restLogoutSuccessHandler = restLogoutSuccessHandler;
             this.restAccessDeniedHandler = restAccessDeniedHandler;
         }
@@ -85,20 +75,17 @@ public class SecurityConfig {
             List<String> securityIgnoreUrls = systemConfig.getSecurityIgnoreUrls();
             String[] ignores = new String[securityIgnoreUrls.size()];
             http
-                    .addFilterAt(authenticationFilter(), UsernamePasswordAuthenticationFilter.class)
-                    .authenticationProvider(restAuthenticationProvider)
+                    .addFilterBefore(jwtAuthenticationTokenFilter(), UsernamePasswordAuthenticationFilter.class)
                     .authorizeRequests()
                     .antMatchers(securityIgnoreUrls.toArray(ignores)).permitAll()
                     .antMatchers("/api/admin/**").hasRole(RoleEnum.ADMIN.getName())
                     .antMatchers("/api/student/**").hasRole(RoleEnum.STUDENT.getName())
                     .anyRequest().permitAll()
                     .and().exceptionHandling().accessDeniedHandler(restAccessDeniedHandler)
-                    .and().formLogin().successHandler(restAuthenticationSuccessHandler).failureHandler(restAuthenticationFailureHandler)
                     .and()
                     .exceptionHandling().authenticationEntryPoint(restAuthenticationEntryPoint)
                     //添加认证管理器
                     .and().logout().logoutUrl("/api/user/logout").logoutSuccessHandler(restLogoutSuccessHandler).invalidateHttpSession(true)
-//                    .and().rememberMe().key(CookieConfig.getName()).tokenValiditySeconds(CookieConfig.getInterval()).userDetailsService(formDetailsService)
                     .and().csrf().disable()
                     .cors();
         }
@@ -119,14 +106,8 @@ public class SecurityConfig {
 
 
         @Bean
-        public RestLoginAuthenticationFilter authenticationFilter() throws Exception {
-            RestLoginAuthenticationFilter authenticationFilter = new RestLoginAuthenticationFilter();
-            authenticationFilter.setAuthenticationSuccessHandler(restAuthenticationSuccessHandler);
-            authenticationFilter.setAuthenticationFailureHandler(restAuthenticationFailureHandler);
-            authenticationFilter.setAuthenticationManager(authenticationManagerBean());
-            //方法是自己写的
-//            authenticationFilter.setUserDetailsService(formDetailsService);
-            return authenticationFilter;
+        public JwtAuthenticationTokenFilter jwtAuthenticationTokenFilter() {
+            return new JwtAuthenticationTokenFilter();
         }
 
 

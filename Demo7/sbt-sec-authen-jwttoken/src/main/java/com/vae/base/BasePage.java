@@ -2,7 +2,6 @@ package com.vae.base;
 
 /**
  * 应用到 viewmodel 或 domain 类中，进行继承
- *
  * @version 3.3.0
  * @description: The type Base page.
  * Copyright (C), 2020-2021, 武汉思维跳跃科技有限公司

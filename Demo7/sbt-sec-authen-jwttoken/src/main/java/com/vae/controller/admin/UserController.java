@@ -2,7 +2,6 @@ package com.vae.controller.admin;
 
 import com.vae.base.RestResponse;
 import com.vae.controller.BaseApiController;
-import com.vae.domain.User;
 import com.vae.service.AuthenticationService;
 import com.vae.service.UserService;
 import com.vae.viewmodel.UserResponseVM;

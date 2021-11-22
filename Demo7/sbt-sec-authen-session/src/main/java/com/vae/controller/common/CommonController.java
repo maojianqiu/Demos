@@ -1,4 +1,4 @@
-package com.vae.controller.admin;
+package com.vae.controller.common;
 
 import com.vae.base.RestResponse;
 import com.vae.controller.BaseApiController;
@@ -7,24 +7,18 @@ import com.vae.service.AuthenticationService;
 import com.vae.service.UserService;
 import com.vae.viewmodel.UserResponseVM;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
 
 /**
  * @author 武汉思维跳跃科技有限公司
  */
-@RestController("AdminUserController")
-@RequestMapping(value = "/api/admin/user")
-public class UserController extends BaseApiController {
+@RestController("CommonController")
+@RequestMapping(value = "/api/common/")
+public class CommonController extends BaseApiController {
 
-    private final UserService userService;
-    private final AuthenticationService authenticationService;
-
-    @Autowired
-    public UserController(UserService userService,  AuthenticationService authenticationService) {
-        this.userService = userService;
-        this.authenticationService = authenticationService;
-    }
 
     @RequestMapping(value = "/current", method = RequestMethod.POST)
     public RestResponse<UserResponseVM> current() {
@@ -33,10 +27,8 @@ public class UserController extends BaseApiController {
         return RestResponse.ok(userVm);
     }
 
-
     @RequestMapping(value = "/test1", method = RequestMethod.GET)
     public RestResponse<String> test1() {
-        System.out.println("00");
         return RestResponse.ok("test~~~~~~1~~~~~~~~GET~~~~~~");
     }
 
@@ -49,5 +41,12 @@ public class UserController extends BaseApiController {
     public RestResponse<String> test3() {
         return RestResponse.ok("test~~~~~~3~~~~~~~~GET~~~~~~");
     }
+
+    @RequestMapping(value = "/test4", method = RequestMethod.GET)
+    public RestResponse<String> test4() {
+        return RestResponse.ok("test~~~~~~4~~~~~~~GET~~~~~~~");
+    }
+
+
 
 }

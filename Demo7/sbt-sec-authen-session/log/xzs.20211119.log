@@ -1345,3 +1345,42 @@ java.lang.NullPointerException: null
 
 2021-11-19 16:56:13.401  INFO 4168 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2021-11-19 16:56:13.408  INFO 4168 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-11-19 16:56:18.707  INFO 9424 --- [main] com.vae.Application                      : Starting Application using Java 1.8.0_281 on SKY-20210218KET with PID 9424 (E:\PycharmProjects\demo\Demo7\sbt-sec-authen-session\target\classes started by Administrator in E:\PycharmProjects\demo\Demo7\sbt-sec-authen-session)
+2021-11-19 16:56:18.710  INFO 9424 --- [main] com.vae.Application                      : The following profiles are active: dev
+2021-11-19 16:56:20.402  INFO 9424 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2021-11-19 16:56:20.415  INFO 9424 --- [main] o.a.coyote.http11.Http11NioProtocol      : Initializing ProtocolHandler ["http-nio-8000"]
+2021-11-19 16:56:20.416  INFO 9424 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-19 16:56:20.416  INFO 9424 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
+2021-11-19 16:56:20.531  INFO 9424 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-19 16:56:20.531  INFO 9424 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1711 ms
+2021-11-19 16:56:21.286  INFO 9424 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@62ade015, org.springframework.security.web.context.SecurityContextPersistenceFilter@96897c8, org.springframework.security.web.header.HeaderWriterFilter@230a73f2, org.springframework.web.filter.CorsFilter@70ede57d, org.springframework.security.web.authentication.logout.LogoutFilter@5d352de0, com.vae.configuration.spring.security.RestLoginAuthenticationFilter@5eb5da12, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6467ddc7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@22d8f4ed, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7f3fc42f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@70997a94, org.springframework.security.web.session.SessionManagementFilter@383cb5ce, org.springframework.security.web.access.ExceptionTranslationFilter@5b251fb9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1f7cec93]
+2021-11-19 16:56:21.688  INFO 9424 --- [main] o.a.coyote.http11.Http11NioProtocol      : Starting ProtocolHandler ["http-nio-8000"]
+2021-11-19 16:56:21.707  INFO 9424 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8000 (http) with context path ''
+2021-11-19 16:56:21.720  INFO 9424 --- [main] com.vae.Application                      : Started Application in 3.844 seconds (JVM running for 4.845)
+2021-11-19 16:56:29.115  INFO 9424 --- [http-nio-8000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-19 16:56:29.116  INFO 9424 --- [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-11-19 16:56:29.118  INFO 9424 --- [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-11-19 16:57:16.233  INFO 9424 --- [http-nio-8000-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-19 16:57:16.382  INFO 9424 --- [http-nio-8000-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-11-19 16:58:17.168  WARN 9424 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m680ms583µs410ns).
+2021-11-19 16:58:17.252  INFO 9424 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-11-19 16:58:17.258  INFO 9424 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-11-19 16:59:18.402  INFO 9764 --- [main] com.vae.Application                      : Starting Application using Java 1.8.0_281 on SKY-20210218KET with PID 9764 (E:\PycharmProjects\demo\Demo7\sbt-sec-authen-session\target\classes started by Administrator in E:\PycharmProjects\demo\Demo7\sbt-sec-authen-session)
+2021-11-19 16:59:18.406  INFO 9764 --- [main] com.vae.Application                      : The following profiles are active: dev
+2021-11-19 16:59:19.942  INFO 9764 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2021-11-19 16:59:19.953  INFO 9764 --- [main] o.a.coyote.http11.Http11NioProtocol      : Initializing ProtocolHandler ["http-nio-8000"]
+2021-11-19 16:59:19.954  INFO 9764 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-19 16:59:19.954  INFO 9764 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
+2021-11-19 16:59:20.072  INFO 9764 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-19 16:59:20.072  INFO 9764 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1598 ms
+2021-11-19 16:59:20.835  INFO 9764 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3c9ef6e9, org.springframework.security.web.context.SecurityContextPersistenceFilter@32256e68, org.springframework.security.web.header.HeaderWriterFilter@236ae13d, org.springframework.web.filter.CorsFilter@3cdff901, org.springframework.security.web.authentication.logout.LogoutFilter@4b325930, com.vae.configuration.spring.security.RestLoginAuthenticationFilter@79eeff87, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3b7c58e7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@353f472a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@230a73f2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@57e5396b, org.springframework.security.web.session.SessionManagementFilter@2be818da, org.springframework.security.web.access.ExceptionTranslationFilter@12d40609, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@10f477e2]
+2021-11-19 16:59:21.236  INFO 9764 --- [main] o.a.coyote.http11.Http11NioProtocol      : Starting ProtocolHandler ["http-nio-8000"]
+2021-11-19 16:59:21.257  INFO 9764 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8000 (http) with context path ''
+2021-11-19 16:59:21.271  INFO 9764 --- [main] com.vae.Application                      : Started Application in 3.805 seconds (JVM running for 4.778)
+2021-11-19 16:59:59.482  INFO 9764 --- [http-nio-8000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-19 16:59:59.482  INFO 9764 --- [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-11-19 16:59:59.483  INFO 9764 --- [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-11-19 16:59:59.606  INFO 9764 --- [http-nio-8000-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-19 16:59:59.744  INFO 9764 --- [http-nio-8000-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-11-19 17:00:35.565  INFO 9764 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-11-19 17:00:35.572  INFO 9764 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
