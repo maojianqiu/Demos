@@ -1,6 +1,7 @@
 package com.vae.viewmodel;
 
 
+import com.vae.domain.User;
 import com.vae.util.DateTimeUtil;
 import org.springframework.beans.BeanUtils;
 

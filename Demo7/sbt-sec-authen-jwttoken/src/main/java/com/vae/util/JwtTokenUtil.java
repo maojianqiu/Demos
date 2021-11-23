@@ -9,6 +9,7 @@ import io.jsonwebtoken.SignatureAlgorithm;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Date;
 import java.util.HashMap;
@@ -88,9 +89,9 @@ public class JwtTokenUtil {
      * 验证token是否还有效
      *
      */
-    public boolean validateToken(String token, AuthenticationUserDetails user) {
-        String username = getUserNameFromToken(token);
-        return username.equals(user.getUsername()) && !isTokenExpired(token);
+    public boolean validateToken(String token) {
+
+        return !isTokenExpired(token);
     }
 
     /**
@@ -112,7 +113,7 @@ public class JwtTokenUtil {
     /**
      * 根据用户信息生成token
      */
-    public String generateToken(AuthenticationUserDetails user) {
+    public String generateToken(UserDetails user) {
         Map<String, Object> claims = new HashMap<>();
         claims.put(CLAIM_KEY_USERNAME, user.getUsername());
         claims.put(CLAIM_KEY_CREATED, new Date());

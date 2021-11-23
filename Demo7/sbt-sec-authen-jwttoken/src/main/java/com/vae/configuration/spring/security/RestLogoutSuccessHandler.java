@@ -1,7 +1,6 @@
 package com.vae.configuration.spring.security;
 
 import com.vae.base.SystemCode;
-import com.vae.service.UserService;
 import com.vae.util.RestUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationEventPublisher;
@@ -21,12 +20,10 @@ import javax.servlet.http.HttpServletResponse;
 public class RestLogoutSuccessHandler extends SimpleUrlLogoutSuccessHandler {
 
     private final ApplicationEventPublisher eventPublisher;
-    private final UserService userService;
 
     @Autowired
-    public RestLogoutSuccessHandler(ApplicationEventPublisher eventPublisher, UserService userService) {
+    public RestLogoutSuccessHandler(ApplicationEventPublisher eventPublisher) {
         this.eventPublisher = eventPublisher;
-        this.userService = userService;
     }
 
     @Override

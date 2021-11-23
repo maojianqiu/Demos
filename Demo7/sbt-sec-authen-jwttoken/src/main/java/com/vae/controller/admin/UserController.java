@@ -1,12 +1,18 @@
 package com.vae.controller.admin;
 
 import com.vae.base.RestResponse;
+import com.vae.base.SystemCode;
 import com.vae.controller.BaseApiController;
+import com.vae.domain.User;
 import com.vae.service.AuthenticationService;
-import com.vae.service.UserService;
+import com.vae.viewmodel.UserLoginVM;
 import com.vae.viewmodel.UserResponseVM;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.HashMap;
+import java.util.Map;
 
 
 /**
@@ -15,15 +21,6 @@ import org.springframework.web.bind.annotation.*;
 @RestController("AdminUserController")
 @RequestMapping(value = "/api/admin/user")
 public class UserController extends BaseApiController {
-
-    private final UserService userService;
-    private final AuthenticationService authenticationService;
-
-    @Autowired
-    public UserController(UserService userService,  AuthenticationService authenticationService) {
-        this.userService = userService;
-        this.authenticationService = authenticationService;
-    }
 
     @RequestMapping(value = "/current", method = RequestMethod.POST)
     public RestResponse<UserResponseVM> current() {

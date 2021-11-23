@@ -2,6 +2,7 @@ package com.vae.controller.student;
 
 import com.vae.base.RestResponse;
 import com.vae.controller.BaseApiController;
+import com.vae.domain.User;
 import com.vae.viewmodel.UserResponseVM;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,16 +13,6 @@ import org.springframework.web.bind.annotation.*;
 @RestController("StudentUserController")
 @RequestMapping(value = "/api/student/user")
 public class UserController extends BaseApiController {
-
-//    private final UserService userService;
-//    private final AuthenticationService authenticationService;
-//
-//    @Autowired
-//    public UserController(UserService userService, AuthenticationService authenticationService) {
-//        this.userService = userService;
-//        this.authenticationService = authenticationService;
-//    }
-
 
 
     @RequestMapping(value = "/current", method = RequestMethod.POST)

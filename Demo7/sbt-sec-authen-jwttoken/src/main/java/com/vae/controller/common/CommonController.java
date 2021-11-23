@@ -2,6 +2,7 @@ package com.vae.controller.common;
 
 import com.vae.base.RestResponse;
 import com.vae.controller.BaseApiController;
+import com.vae.domain.User;
 import com.vae.viewmodel.UserResponseVM;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

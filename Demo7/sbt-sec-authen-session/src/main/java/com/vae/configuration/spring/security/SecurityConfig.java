@@ -73,6 +73,8 @@ public class SecurityConfig {
          * ~~ 然后在最后 FilterSecurityInterpreter 中进行路劲匹配和权限匹配。
          * ~~ 2.当前代码，没有使用 security 自带的 UserDtasil ,而是在自定义的 AuthenticationProvider 中使用自定义的 UserService
          * ~~ 所以其实是后端这边定死了 什么角色有什么接口权限，不能任意分配。
+         * ~~ 3.注意，其实不用 .and().formLogin().successHandler 添加处理器也可以，只要有对应的 bean 就会搜索到，并且注入使用。但为了清楚都用了什么，还是添使用比较好。
+         *
          *
          * @param http http
          * @throws Exception exception

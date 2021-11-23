@@ -2,6 +2,7 @@ package com.vae.controller;
 
 
 import com.vae.context.WebContext;
+import com.vae.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 
 /**
