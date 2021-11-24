@@ -9,6 +9,7 @@ import com.vae.viewmodel.UserLoginVM;
 import com.vae.viewmodel.UserResponseVM;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
@@ -24,7 +25,7 @@ public class UserController extends BaseApiController {
 
     @RequestMapping(value = "/current", method = RequestMethod.POST)
     public RestResponse<UserResponseVM> current() {
-        User user = getCurrentUser();
+        UserDetails user = getCurrentUser();
         UserResponseVM userVm = UserResponseVM.from(user);
         return RestResponse.ok(userVm);
     }

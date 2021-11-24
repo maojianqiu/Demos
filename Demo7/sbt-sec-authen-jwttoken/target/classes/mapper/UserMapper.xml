@@ -28,15 +28,15 @@
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List" />
-    from authen_session_user
+    from authen_token_jwt_user
     where id = #{id,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
-    delete from authen_session_user
+    delete from authen_token_jwt_user
     where id = #{id,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="com.vae.domain.User" useGeneratedKeys="true" keyProperty="id">
-    insert into authen_session_user (id, user_uuid, user_name,
+    insert into authen_token_jwt_user (id, user_uuid, user_name,
       password, real_name, age,
       sex, birth_day, user_level,
       phone, role, status,
@@ -52,7 +52,7 @@
       )
   </insert>
   <insert id="insertSelective" parameterType="com.vae.domain.User" useGeneratedKeys="true" keyProperty="id">
-    insert into authen_session_user
+    insert into authen_token_jwt_user
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
         id,
@@ -167,7 +167,7 @@
     </trim>
   </insert>
   <update id="updateByPrimaryKeySelective" parameterType="com.vae.domain.User">
-    update authen_session_user
+    update authen_token_jwt_user
     <set>
       <if test="userUuid != null">
         user_uuid = #{userUuid,jdbcType=VARCHAR},
@@ -224,7 +224,7 @@
     where id = #{id,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.vae.domain.User">
-    update authen_session_user
+    update authen_token_jwt_user
     set user_uuid = #{userUuid,jdbcType=VARCHAR},
       user_name = #{userName,jdbcType=VARCHAR},
       password = #{password,jdbcType=VARCHAR},
@@ -248,7 +248,7 @@
   <select id="getUserByUserName" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List"/>
-    from authen_session_user
+    from authen_token_jwt_user
     where deleted=0  and user_name=#{value} limit 1
   </select>
 
