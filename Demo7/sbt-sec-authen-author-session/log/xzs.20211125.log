@@ -1,0 +1,58 @@
+2021-11-25 16:07:54.579  INFO 11596 --- [main] com.vae.Application                      : Starting Application using Java 1.8.0_281 on SKY-20210218KET with PID 11596 (E:\PycharmProjects\demo\Demo7\sbt-sec-authen-author-session\target\classes started by Administrator in E:\PycharmProjects\demo\Demo7\sbt-sec-authen-author-session)
+2021-11-25 16:07:54.584  INFO 11596 --- [main] com.vae.Application                      : The following profiles are active: dev
+2021-11-25 16:07:57.423  INFO 11596 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2021-11-25 16:07:57.438  INFO 11596 --- [main] o.a.coyote.http11.Http11NioProtocol      : Initializing ProtocolHandler ["http-nio-8000"]
+2021-11-25 16:07:57.439  INFO 11596 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-25 16:07:57.439  INFO 11596 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
+2021-11-25 16:07:57.600  INFO 11596 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-25 16:07:57.600  INFO 11596 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2832 ms
+2021-11-25 16:07:58.462 ERROR 11596 --- [main] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'securityConfig.FormLoginWebSecurityConfigurerAdapter' defined in file [E:\PycharmProjects\demo\Demo7\sbt-sec-authen-author-session\target\classes\com\vae\configuration\spring\security\SecurityConfig$FormLoginWebSecurityConfigurerAdapter.class]: Unsatisfied dependency expressed through constructor parameter 7; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'securityConfig.FormLoginWebSecurityConfigurerAdapter': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2021-11-25 16:07:58.538  INFO 11596 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-11-25 16:07:58.543  WARN 11596 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+2021-11-25 16:07:58.561  INFO 11596 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-11-25 16:07:58.600 ERROR 11596 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+┌──->──┐
+|  securityConfig.FormLoginWebSecurityConfigurerAdapter defined in file [E:\PycharmProjects\demo\Demo7\sbt-sec-authen-author-session\target\classes\com\vae\configuration\spring\security\SecurityConfig$FormLoginWebSecurityConfigurerAdapter.class]
+└──<-──┘
+
+
+2021-11-25 16:12:02.134  INFO 2992 --- [main] com.vae.Application                      : Starting Application using Java 1.8.0_281 on SKY-20210218KET with PID 2992 (E:\PycharmProjects\demo\Demo7\sbt-sec-authen-author-session\target\classes started by Administrator in E:\PycharmProjects\demo\Demo7\sbt-sec-authen-author-session)
+2021-11-25 16:12:02.137  INFO 2992 --- [main] com.vae.Application                      : The following profiles are active: dev
+2021-11-25 16:12:03.450  INFO 2992 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2021-11-25 16:12:03.460  INFO 2992 --- [main] o.a.coyote.http11.Http11NioProtocol      : Initializing ProtocolHandler ["http-nio-8000"]
+2021-11-25 16:12:03.460  INFO 2992 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-25 16:12:03.461  INFO 2992 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
+2021-11-25 16:12:03.555  INFO 2992 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-25 16:12:03.556  INFO 2992 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1349 ms
+2021-11-25 16:12:03.884 ERROR 2992 --- [main] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'securityConfig.FormLoginWebSecurityConfigurerAdapter' defined in file [E:\PycharmProjects\demo\Demo7\sbt-sec-authen-author-session\target\classes\com\vae\configuration\spring\security\SecurityConfig$FormLoginWebSecurityConfigurerAdapter.class]: Unsatisfied dependency expressed through constructor parameter 7; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'securityConfig.FormLoginWebSecurityConfigurerAdapter': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2021-11-25 16:12:03.909  INFO 2992 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-11-25 16:12:03.914  WARN 2992 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+2021-11-25 16:12:03.924  INFO 2992 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-11-25 16:12:03.939 ERROR 2992 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+┌──->──┐
+|  securityConfig.FormLoginWebSecurityConfigurerAdapter defined in file [E:\PycharmProjects\demo\Demo7\sbt-sec-authen-author-session\target\classes\com\vae\configuration\spring\security\SecurityConfig$FormLoginWebSecurityConfigurerAdapter.class]
+└──<-──┘
+
+
