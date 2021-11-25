@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
@@ -52,20 +53,23 @@ public class SecurityConfig {
         }
 
         /**
-         * 1.过滤身份认证，
-         * 2.添加白名单和其余路径匹配
+         * 1.过滤身份认证，每个路径都要经过这个过滤，然后若 token 有效则保存到 security 上下文。方便在 controller 中使用。
+         * 2.添加白名单和其余路径匹配,登录请求需要白名单
          * 3.处理权限不足
-         * 4.处理登录成功后、失败后
+         * //4.处理登录成功后、失败后
          * 5.处理未登录
          * 6.添加登陆路径过滤
-         * 7.处理登出成功 以及  登出后 session 失效
+         * 7.处理登出成功
          * 8.设置跨站请求伪造 无效
          * 9.设置跨域请求
+         * 10.设置不创建session
          *
-         * ~~ 1.相当于每次“登录”时都在 自定义的身份认证过滤链（RestLoginAuthenticationFilter）中进行认证，认证失败则失败，认证成功则拿到用户的用户名密码和权限（ADMIN STUDENT etc），
-         * ~~ 然后在最后 FilterSecurityInterpreter 中进行路劲匹配和权限匹配。
-         * ~~ 2.当前代码，没有使用 security 自带的 UserDtasil ,而是在自定义的 AuthenticationProvider 中使用自定义的 UserService
-         * ~~ 所以其实是后端这边定死了 什么角色有什么接口权限，不能任意分配。
+         * ~~ 1.相当于每次请求都在自定义过滤器中判断是否有 token ，有就身份认证成功，并添加到SecurityContextHolder（ADMIN STUDENT etc），
+         * ~~ 然后在最后 FilterSecurityInterceptor(从 SecurityContextHolder 中获取用户) 中进行路劲匹配和权限匹配。
+         * ~~ 2.在 RestAuthenticationProvider 里面进行身份认证，然后创建 new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities())
+         * ~~ 3.记住，SecurityContextPersistenceFilter 这个过滤器中会清空 SecurityContextHolder.clearContext();
+         * ~~ 也是就是每次请求完毕后会返回到这个过滤器中进行这个操作。
+         * ~~ 4.注意，其实不用 .and().formLogin().successHandler 添加处理器也可以，只要有对应的 bean 就会搜索到，并且注入使用。但为了清楚都用了什么，还是添使用比较好。
          *
          * @param http http
          * @throws Exception exception
@@ -84,13 +88,18 @@ public class SecurityConfig {
                     .antMatchers("/api/admin/**").hasRole(RoleEnum.ADMIN.getName())
                     .antMatchers("/api/student/**").hasRole(RoleEnum.STUDENT.getName())
                     .anyRequest().permitAll()
-                    .and().exceptionHandling().accessDeniedHandler(restAccessDeniedHandler)
-                    .and()
-                    .exceptionHandling().authenticationEntryPoint(restAuthenticationEntryPoint)
+
+                    .and().exceptionHandling().accessDeniedHandler(restAccessDeniedHandler).authenticationEntryPoint(restAuthenticationEntryPoint)
                     //添加认证管理器
                     .and().logout().logoutUrl("/api/user/logout").logoutSuccessHandler(restLogoutSuccessHandler).invalidateHttpSession(true)
                     .and().csrf().disable()
-                    .cors();
+                    .cors()
+                    /*
+                     * Spring Security下的枚举SessionCreationPolicy,管理session的创建策略
+                     * STATELES
+                     * Spring Security永远不会创建HttpSession，它不会使用HttpSession来获取SecurityContext
+                     */
+                    .and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
         }
 
 
