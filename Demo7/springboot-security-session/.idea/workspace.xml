@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="088927ac-5232-4b11-9b08-b3304a0825e7" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/../sbt-sec-authen-session/.idea/sbt-sec-authen-session.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../sbt-sec-authen-session/sbt-sec-authen-session.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../sbt-sec-authen-session/src/main/java/com/vae/service/AuthenticationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../sbt-sec-authen-session/src/main/java/com/vae/service/impl/AuthenticationServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sbt-sec-authen-author-session/log/xzs.20211125.log" beforeDir="false" afterPath="$PROJECT_DIR$/../sbt-sec-authen-author-session/log/xzs.20211125.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sbt-sec-authen-author-session/src/main/java/com/vae/configuration/spring/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sbt-sec-authen-author-session/src/main/java/com/vae/configuration/spring/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sbt-sec-authen-author-session/target/classes/com/vae/configuration/spring/security/SecurityConfig$FormLoginWebSecurityConfigurerAdapter$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sbt-sec-authen-author-session/target/classes/com/vae/configuration/spring/security/SecurityConfig$FormLoginWebSecurityConfigurerAdapter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sbt-sec-authen-author-session/target/classes/com/vae/configuration/spring/security/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sbt-sec-authen-author-session/target/classes/com/vae/configuration/spring/security/SecurityConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot-security-token-authorization/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-security-token-authorization/.idea/compiler.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +39,7 @@
     <property name="SearchEverywhereHistoryKey" value="filterSecurity&#9;PSI&#9;JAVA://org.springframework.security.web.access.intercept.FilterSecurityInterceptor&#10;Dao&#9;PSI&#9;JAVA://org.springframework.security.authentication.dao.DaoAuthenticationProvider&#10;username&#9;PSI&#9;JAVA://org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../sbt-sec-authen-session/pom.xml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="SDKs" />
@@ -115,6 +115,8 @@
       <workItem from="1637188929733" duration="3279000" />
       <workItem from="1637197171695" duration="14097000" />
       <workItem from="1637278187053" duration="1748000" />
+      <workItem from="1637831349522" duration="611000" />
+      <workItem from="1637888337502" duration="1173000" />
     </task>
     <servers />
   </component>
@@ -171,6 +173,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="242" height="198" key="ShowFilterAction_Filter_Popup/0.0.1920.1040@0.0.1920.1040" timestamp="1637305345408" />
+    <state x="0" y="0" key="com.intellij.ide.util.TipDialog" timestamp="1637888725954">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="0" y="0" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1637888725954" />
     <state x="287" y="219" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1637312104134">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

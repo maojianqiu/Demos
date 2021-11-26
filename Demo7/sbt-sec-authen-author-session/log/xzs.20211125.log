@@ -56,3 +56,32 @@ The dependencies of some of the beans in the application context form a cycle:
 └──<-──┘
 
 
+2021-11-25 17:25:19.370  INFO 11844 --- [main] com.vae.Application                      : Starting Application using Java 1.8.0_281 on SKY-20210218KET with PID 11844 (E:\PycharmProjects\demo\Demo7\sbt-sec-authen-author-session\target\classes started by Administrator in E:\PycharmProjects\demo\Demo7\sbt-sec-authen-author-session)
+2021-11-25 17:25:19.374  INFO 11844 --- [main] com.vae.Application                      : The following profiles are active: dev
+2021-11-25 17:25:21.063  INFO 11844 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2021-11-25 17:25:21.073  INFO 11844 --- [main] o.a.coyote.http11.Http11NioProtocol      : Initializing ProtocolHandler ["http-nio-8000"]
+2021-11-25 17:25:21.074  INFO 11844 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-25 17:25:21.074  INFO 11844 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
+2021-11-25 17:25:21.172  INFO 11844 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-25 17:25:21.172  INFO 11844 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1641 ms
+2021-11-25 17:25:21.490 ERROR 11844 --- [main] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'securityConfig' defined in file [E:\PycharmProjects\demo\Demo7\sbt-sec-authen-author-session\target\classes\com\vae\configuration\spring\security\SecurityConfig.class]: Unsatisfied dependency expressed through constructor parameter 7; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'securityConfig': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2021-11-25 17:25:21.530  INFO 11844 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-11-25 17:25:21.535  WARN 11844 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+2021-11-25 17:25:21.545  INFO 11844 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-11-25 17:25:21.559 ERROR 11844 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+┌──->──┐
+|  securityConfig defined in file [E:\PycharmProjects\demo\Demo7\sbt-sec-authen-author-session\target\classes\com\vae\configuration\spring\security\SecurityConfig.class]
+└──<-──┘
+
+

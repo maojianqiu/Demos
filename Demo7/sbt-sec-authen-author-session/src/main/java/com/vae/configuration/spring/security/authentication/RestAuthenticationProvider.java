@@ -36,13 +36,11 @@ public class RestAuthenticationProvider implements AuthenticationProvider {
 
     private final AuthenticationService authenticationService;
     private final UserService userService;
-    private final WebContext webContext;
 
     @Autowired
-    public RestAuthenticationProvider(AuthenticationService authenticationService, UserService userService, WebContext webContext) {
+    public RestAuthenticationProvider(AuthenticationService authenticationService, UserService userService) {
         this.authenticationService = authenticationService;
         this.userService = userService;
-        this.webContext = webContext;
     }
 
     @Override

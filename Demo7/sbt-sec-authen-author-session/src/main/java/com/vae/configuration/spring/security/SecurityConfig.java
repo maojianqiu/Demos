@@ -40,31 +40,27 @@ import java.util.concurrent.ConcurrentHashMap;
 
 @Configuration
 @EnableWebSecurity
-public class SecurityConfig {
+public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-    @Configuration
-    public static class FormLoginWebSecurityConfigurerAdapter extends WebSecurityConfigurerAdapter {
-
-        private final SystemConfig systemConfig;
-        private final LoginAuthenticationEntryPoint restAuthenticationEntryPoint;
-        private final RestAuthenticationProvider restAuthenticationProvider;
-        private final RestAuthenticationSuccessHandler restAuthenticationSuccessHandler;
-        private final RestAuthenticationFailureHandler restAuthenticationFailureHandler;
-        private final RestLogoutSuccessHandler restLogoutSuccessHandler;
-        private final RestAccessDeniedHandler restAccessDeniedHandler;
-        private final RestSecurityService dynamicSecurityService;
-        private final UmsResourceService umsResourceService;
+        private  SystemConfig systemConfig;
+        private  LoginAuthenticationEntryPoint restAuthenticationEntryPoint;
+        private  RestAuthenticationProvider restAuthenticationProvider;
+        private  RestAuthenticationSuccessHandler restAuthenticationSuccessHandler;
+        private  RestAuthenticationFailureHandler restAuthenticationFailureHandler;
+        private  RestLogoutSuccessHandler restLogoutSuccessHandler;
+        private  RestAccessDeniedHandler restAccessDeniedHandler;
+        private  RestSecurityService restSecurityService;
 
         @Autowired
-        public FormLoginWebSecurityConfigurerAdapter(SystemConfig systemConfig,
+        public SecurityConfig(SystemConfig systemConfig,
                                                      LoginAuthenticationEntryPoint restAuthenticationEntryPoint,
                                                      RestAuthenticationProvider restAuthenticationProvider,
                                                      RestAuthenticationSuccessHandler restAuthenticationSuccessHandler,
                                                      RestAuthenticationFailureHandler restAuthenticationFailureHandler,
                                                      RestLogoutSuccessHandler restLogoutSuccessHandler,
                                                      RestAccessDeniedHandler restAccessDeniedHandler,
-                                                     RestSecurityService dynamicSecurityService,
-                                                     UmsResourceService umsResourceService) {
+                                                     RestSecurityService restSecurityService
+        ) {
             this.systemConfig = systemConfig;
             this.restAuthenticationEntryPoint = restAuthenticationEntryPoint;
             this.restAuthenticationProvider = restAuthenticationProvider;
@@ -72,11 +68,13 @@ public class SecurityConfig {
             this.restAuthenticationFailureHandler = restAuthenticationFailureHandler;
             this.restLogoutSuccessHandler = restLogoutSuccessHandler;
             this.restAccessDeniedHandler = restAccessDeniedHandler;
-            this.dynamicSecurityService = dynamicSecurityService;
-            this.umsResourceService = umsResourceService;
+            this.restSecurityService = restSecurityService;
         }
 
-        /**
+    public SecurityConfig() {
+    }
+
+    /**
          * 1.过滤身份认证，
          * 2.添加白名单和其余路径匹配
          * 3.处理权限不足
@@ -124,7 +122,7 @@ public class SecurityConfig {
                     .cors();
 
             //有动态权限配置时添加动态权限校验过滤器
-            if (dynamicSecurityService != null) {
+            if (this.restSecurityService != null) {
                 http.authorizeRequests().and().addFilterBefore(restAuthorizationFilter(), FilterSecurityInterceptor.class);
             }
         }
@@ -161,20 +159,26 @@ public class SecurityConfig {
         }
 
 
-        @Bean
-        public RestSecurityService dynamicSecurityService() {
-            return new RestSecurityService() {
-                @Override
-                public Map<String, ConfigAttribute> loadDataSource() {
-                    Map<String, ConfigAttribute> map = new ConcurrentHashMap<>();
-                    List<UmsResource> resourceList = umsResourceService.listAll();
-                    for (UmsResource resource : resourceList) {
-                        map.put(resource.getUrl(), new org.springframework.security.access.SecurityConfig(resource.getId() + ":" + resource.getName()));
-                    }
-                    return map;
-                }
-            };
-        }
 
-    }
+/*
+* 注意：这里如果使用匿名内部类产生 bean ，就不能在当前配置类中 引入（Autowried）这个 bean ，会产生循环依赖
+* */
+//        @Bean
+//        public RestSecurityService restSecurityService() {
+//            return new RestSecurityService() {
+//                @Override
+//                public Map<String, ConfigAttribute> loadDataSource() {
+//                    System.out.println("----------------");
+//        //                    Map<String, ConfigAttribute> map = new ConcurrentHashMap<>();
+//        //                    List<UmsResource> resourceList = umsResourceService.listAll();
+//        //                    for (UmsResource resource : resourceList) {
+//        //                        map.put(resource.getUrl(), new org.springframework.security.access.SecurityConfig(resource.getId() + ":" + resource.getName()));
+//        //                    }
+//        //                    return map;
+//                    return null;
+//                }
+//            };
+//        }
+
+
 }
