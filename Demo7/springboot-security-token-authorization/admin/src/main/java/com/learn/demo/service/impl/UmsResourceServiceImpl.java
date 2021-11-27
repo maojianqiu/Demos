@@ -21,8 +21,8 @@ import java.util.List;
 public class UmsResourceServiceImpl implements UmsResourceService {
     @Autowired
     private UmsResourceMapper resourceMapper;
-    @Autowired
-    private UmsAdminCacheService adminCacheService;
+//    @Autowired
+//    private UmsAdminCacheService adminCacheService;
 
     @Override
     public int create(UmsResource umsResource) {
@@ -34,7 +34,7 @@ public class UmsResourceServiceImpl implements UmsResourceService {
     public int update(Long id, UmsResource umsResource) {
         umsResource.setId(id);
         int count = resourceMapper.updateByPrimaryKeySelective(umsResource);
-        adminCacheService.delResourceListByResource(id);
+//        adminCacheService.delResourceListByResource(id);
         return count;
     }
 
@@ -46,7 +46,7 @@ public class UmsResourceServiceImpl implements UmsResourceService {
     @Override
     public int delete(Long id) {
         int count = resourceMapper.deleteByPrimaryKey(id);
-        adminCacheService.delResourceListByResource(id);
+//        adminCacheService.delResourceListByResource(id);
         return count;
     }
 

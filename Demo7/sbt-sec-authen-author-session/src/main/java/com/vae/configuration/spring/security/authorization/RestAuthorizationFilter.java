@@ -54,6 +54,7 @@ public class RestAuthorizationFilter extends AbstractSecurityInterceptor impleme
         //此处会调用AccessDecisionManager中的decide方法进行鉴权操作
         InterceptorStatusToken token = super.beforeInvocation(fi);
         try {
+            fi.getRequest().setAttribute("__spring_security_filterSecurityInterceptor_filterApplied", Boolean.TRUE);
             fi.getChain().doFilter(fi.getRequest(), fi.getResponse());
         } finally {
             super.afterInvocation(token, null);

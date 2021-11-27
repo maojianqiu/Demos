@@ -24,8 +24,6 @@ public class RestSecurityService {
         this.umsResourceService = umsResourceService;
     }
 
-    @Autowired
-
 
     /**
      * 加载资源ANT通配符和资源对应MAP

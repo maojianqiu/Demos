@@ -73,19 +73,19 @@
         id, create_time, name, url, description, category_id
     </sql>
     <select id="selectByExample" parameterType="com.learn.model.UmsResourceExample" resultMap="BaseResultMap">
-        select
-        <if test="distinct">
-            distinct
-        </if>
-        <include refid="Base_Column_List"/>
-        from ums_resource
-        <if test="_parameter != null">
-            <include refid="Example_Where_Clause"/>
-        </if>
-        <if test="orderByClause != null">
-            order by ${orderByClause}
-        </if>
-    </select>
+    select
+    <if test="distinct">
+        distinct
+    </if>
+    <include refid="Base_Column_List"/>
+    from ums_resource
+    <if test="_parameter != null">
+        <include refid="Example_Where_Clause"/>
+    </if>
+    <if test="orderByClause != null">
+        order by ${orderByClause}
+    </if>
+</select>
     <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
         select
         <include refid="Base_Column_List"/>

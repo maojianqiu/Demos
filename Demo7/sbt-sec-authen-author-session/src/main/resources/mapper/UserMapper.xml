@@ -28,15 +28,15 @@
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List" />
-    from authen_session_user
+    from aa_session_user
     where id = #{id,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
-    delete from authen_session_user
+    delete from aa_session_user
     where id = #{id,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="com.vae.domain.model.User" useGeneratedKeys="true" keyProperty="id">
-    insert into authen_session_user (id, user_uuid, user_name,
+    insert into aa_session_user (id, user_uuid, user_name,
       password, real_name, age,
       sex, birth_day, user_level,
       phone, role, status,
@@ -52,7 +52,7 @@
       )
   </insert>
   <insert id="insertSelective" parameterType="com.vae.domain.model.User" useGeneratedKeys="true" keyProperty="id">
-    insert into authen_session_user
+    insert into aa_session_user
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
         id,
@@ -167,7 +167,7 @@
     </trim>
   </insert>
   <update id="updateByPrimaryKeySelective" parameterType="com.vae.domain.model.User">
-    update authen_session_user
+    update aa_session_user
     <set>
       <if test="userUuid != null">
         user_uuid = #{userUuid,jdbcType=VARCHAR},
@@ -224,7 +224,7 @@
     where id = #{id,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.vae.domain.model.User">
-    update authen_session_user
+    update aa_session_user
     set user_uuid = #{userUuid,jdbcType=VARCHAR},
       user_name = #{userName,jdbcType=VARCHAR},
       password = #{password,jdbcType=VARCHAR},
@@ -250,34 +250,34 @@
   <select id="getAllUser" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List"/>
-    from authen_session_user where deleted=0
+    from aa_session_user where deleted=0
   </select>
 
   <select id="getUserById" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List"/>
-    from authen_session_user
+    from aa_session_user
     where id=#{value}
   </select>
 
   <select id="getUserByUserName" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List"/>
-    from authen_session_user
+    from aa_session_user
     where deleted=0  and user_name=#{value} limit 1
   </select>
 
   <select id="getUserByUserNamePwd" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List"/>
-    from authen_session_user
+    from aa_session_user
     where deleted=0  and user_name=#{username} and password=#{pwd} limit 1
   </select>
 
   <select id="getUserByUuid" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List"/>
-    from authen_session_user
+    from aa_session_user
     where deleted=0  and user_uuid=#{value,jdbcType=VARCHAR}
   </select>
 
@@ -285,7 +285,7 @@
   <select id="userPageList" resultMap="BaseResultMap">
     SELECT
     <include refid="Base_Column_List"/>
-    FROM authen_session_user
+    FROM aa_session_user
     <where>
         and deleted=0
       <if test="name != null and name != ''">
@@ -301,7 +301,7 @@
 
 
   <select id="userPageCount" resultType="java.lang.Integer">
-    select count(*) from authen_session_user
+    select count(*) from aa_session_user
     <where>
         and deleted=0
       <if test="name != null and name != ''">
@@ -314,7 +314,7 @@
   <select id="userPage" resultMap="BaseResultMap" parameterType="com.vae.viewmodel.UserPageRequestVM">
     SELECT
     <include refid="Base_Column_List"/>
-    FROM authen_session_user
+    FROM aa_session_user
     <where>
         and deleted=0
       <if test="userName != null and userName != ''">
@@ -330,7 +330,7 @@
 
   <insert id="insertUser" parameterType="com.vae.domain.model.User"
           useGeneratedKeys="true" keyProperty="id">
-		insert into authen_session_user
+		insert into aa_session_user
 		(user_uuid,user_name,password,real_name,age, last_active_time)
 		values
 		(#{userUuid,jdbcType=VARCHAR},#{userName},#{password},#{realName},#{age},#{lastActiveTime})
@@ -338,7 +338,7 @@
 
   <insert id="insertUsers" parameterType="java.util.List"
           useGeneratedKeys="true" keyProperty="id">
-    insert into authen_session_user
+    insert into aa_session_user
     (user_uuid,user_name,password,real_name,age,last_active_time)
     values
     <foreach collection="list" item="item" index="index"
@@ -350,7 +350,7 @@
 
 
   <update id="updateUser" parameterType="com.vae.domain.model.User">
-    update authen_session_user
+    update aa_session_user
     <set>
       <if test="realName != null">real_name = #{realName},</if>
       <if test="age != null">age = #{age},</if>
@@ -361,7 +361,7 @@
 
 
   <update id="updateUsersAge">
-    update authen_session_user set age = #{age} where id in
+    update aa_session_user set age = #{age} where id in
     <foreach item="id" collection="idslist" open="(" separator=","
              close=")">
       #{id}
@@ -370,7 +370,7 @@
 
 
   <delete id="deleteUsersByIds">
-    delete from authen_session_user where id in
+    delete from aa_session_user where id in
     <foreach item="id" collection="list" open="(" separator=","
              close=")">
       #{id}
@@ -378,13 +378,13 @@
   </delete>
 
   <select id="selectAllCount"  resultType="java.lang.Integer">
-		SELECT count(*) from authen_session_user where deleted=0
+		SELECT count(*) from aa_session_user where deleted=0
   </select>
 
 
   <select id="selectByUserName"  resultType="com.vae.domain.other.KeyValue">
 		SELECT  id as value,user_name as name
-		from authen_session_user
+		from aa_session_user
 		where deleted=0  and user_name like concat('%',#{value},'%')
 		limit 5
   </select>
@@ -393,7 +393,7 @@
   <select id="selectByIds" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List" />
-     from authen_session_user
+     from aa_session_user
      where id in
     <foreach item="id" collection="list" open="(" separator=","
              close=")">
@@ -405,7 +405,7 @@
   <select id="selectByWxOpenId" parameterType="java.lang.String" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List" />
-    from authen_session_user
+    from aa_session_user
     where deleted=0  and  wx_open_id = #{wxOpenId}
     limit 1
   </select>
