@@ -1,5 +1,5 @@
 web:
-  resource-path: D:/dreamer-cms/
+  resource-path: E:/PycharmProjects/demo/Project01/dreamer_cms-Previous_Releases_4.0.0/dreamer-cms/
 
 spring: 
   datasource: 
@@ -14,7 +14,7 @@ spring:
     host: 127.0.0.1
     port: 6379
     timeout: 2000
-    password: YTU3e^u!gN^6HHPm
+#    password: YTU3e^u!gN^6HHPm
     jedis:
       pool:
         max-idle: 100

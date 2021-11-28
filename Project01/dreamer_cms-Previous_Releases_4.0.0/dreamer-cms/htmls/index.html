@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Dreamer CMS 梦想家内容发布系统</title>
+    <meta name="Keywords" content="Dreamer CMS 梦想家内容发布系统" />
+	<meta name="Description" content="Dreamer CMS 梦想家内容发布系统是国内首款java开发的内容发布系统，采用最流行的springboot+thymeleaf框架搭建，灵活小巧，配置简单。" />
+    <!--============ All CSS Links ===========-->
+    <link rel="stylesheet" href="/templates/default/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/templates/default/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/templates/default/plugins/slick/slick.css">
+    <link rel="stylesheet" href="/templates/default/plugins/slick/slick-theme.css">
+    <link rel="stylesheet" href="/templates/default/css/app.css">
+    <link rel="stylesheet" href="/templates/default/css/responsive.css">
+</head>
+<body>
+	<!--=== navigation ===-->
+<header id="nav" class="header">
+    <!-- menu -->
+    <div class="navbar navbar-expand-md navbar-light default-menu justify-content-between" role="navigation">
+        <div class="container-fluid">
+            <a href="/" class="site-logo navbar-brand">DreamerCMS</a>
+            <button class="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#v" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="v">
+                <ul class="nav navbar-nav mr-auto">
+                    <li class="nav-item active"><a class="nav-link scroll" href="/">首页</a></li>
+                    
+                    	
+                    	<li class="dropdown nav-item"><a href="/htmls/framework/index.html" class="nav-link dropdown-toggle" data-toggle="dropdown">框架简介</a>
+	                        <ul class="dropdown-menu">
+	                        	
+	                            <li><a class="dropdown-item" href="/htmls/framework/index.html"><i class="ion ion-chevron-right"></i>框架说明</a></li>
+	                            
+	                            <li><a class="dropdown-item" href="/htmls/developer/index.html"><i class="ion ion-chevron-right"></i>开发者</a></li>
+	                            
+	                        </ul>
+	                    </li>
+	                    
+	                    
+                    
+                    	
+	                    
+	                    <li class="nav-item"><a class="nav-link scroll" href="/htmls/versionnotes/list-1.html" title="更新记录">更新记录</a></li>
+	                    
+                    
+                    	
+                    	<li class="dropdown nav-item"><a href="/htmls/document/index.html" class="nav-link dropdown-toggle" data-toggle="dropdown">开发文档</a>
+	                        <ul class="dropdown-menu">
+	                        	
+	                            <li><a class="dropdown-item" href="/htmls/gaiyao/index.html"><i class="ion ion-chevron-right"></i>概要</a></li>
+	                            
+	                            <li><a class="dropdown-item" href="/htmls/document/index.html"><i class="ion ion-chevron-right"></i>标签</a></li>
+	                            
+	                            <li><a class="dropdown-item" href="/htmls/document/index.html"><i class="ion ion-chevron-right"></i>后台使用</a></li>
+	                            
+	                            <li><a class="dropdown-item" href="/htmls/document/index.html"><i class="ion ion-chevron-right"></i>模版制作</a></li>
+	                            
+	                            <li><a class="dropdown-item" href="/htmls/document/index.html"><i class="ion ion-chevron-right"></i>常见问题</a></li>
+	                            
+	                        </ul>
+	                    </li>
+	                    
+	                    
+                    
+                    	
+	                    
+	                    <li class="nav-item"><a class="nav-link scroll" href="/htmls/quickstart/index.html" title="使用说明">使用说明</a></li>
+	                    
+                    
+                    	
+	                    
+	                    <li class="nav-item"><a class="nav-link scroll" href="/htmls/templates/list-1.html" title="模版中心">模版中心</a></li>
+	                    
+                    
+                    	
+	                    
+	                    <li class="nav-item"><a class="nav-link scroll" href="http://www.itechyou.cn" title="开发社区">开发社区</a></li>
+	                    
+                    
+                    	
+	                    
+	                    <li class="nav-item"><a class="nav-link scroll" href="/htmls/message/list-1.html" title="客户留言">客户留言</a></li>
+	                    
+                    
+                </ul>
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="dropdown nav-item"><a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="ion fa fa-search"></i></a>
+                        <ul class="dropdown-menu dropdown-menu-right list-search">
+                            <li class="dropdown-item">
+                                <form class="navbar-left nav-search" role="search" action="/search" method="post">
+                                    <div class="form-inline">
+                                        <input class="form-control" placeholder="输入关键字进行搜索..." type="text" name="entity['keywords']">
+                                        <i class="fa fa-search"></i>
+                                    </div>
+                                </form>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#popup"><i class="ion fa fa-reorder"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+<!--=== offset canvas / sidebar ===-->
+<div class="popup" id="popup">
+    <div class="popup-content"><div class="left-slide-sidebar ">
+        <div class="canvas-title">DreamerCMS MENUS</div>
+        <ul class="list-unstyled slide-sidebar">
+            <li><a href="#">首页</a></li>
+            
+            <li><a href="/htmls/framework/index.html" title="框架简介">框架简介</a></li>
+            
+            <li><a href="/htmls/versionnotes/list-1.html" title="更新记录">更新记录</a></li>
+            
+            <li><a href="/htmls/document/index.html" title="开发文档">开发文档</a></li>
+            
+            <li><a href="/htmls/quickstart/index.html" title="使用说明">使用说明</a></li>
+            
+            <li><a href="/htmls/templates/list-1.html" title="模版中心">模版中心</a></li>
+            
+            <li><a href="http://www.itechyou.cn" title="开发社区">开发社区</a></li>
+            
+            <li><a href="/htmls/message/list-1.html" title="客户留言">客户留言</a></li>
+            
+        </ul>
+    </div>
+        <a href="#close" class="popup-close">&times;</a>
+    </div>
+</div>
+    <!--=== header intro ===-->
+    <section id="home" class="header-intro-1 d-flex align-items-center">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="header-intro-wrap text-center">
+                        <div class="header-intro-title"><h3>梦想家CMS内容管理系统</h3></div>
+                        <div class="header-intro-tag">免费完整开源、标签化建站</div>
+                        <ul class="list-inline">
+                            <li class="list-inline-item"><a href="https://gitee.com/isoftforce/dreamer_cms" class="btn btn-primary main-btn bg-green">源码下载</a></li>
+                            <li class="list-inline-item">
+								
+									<a href="/download/abd987209da941349001c85ffece6eb1" target="_blank" class="btn btn-primary main-btn bg-main">一键运行版下载</a>
+								
+							</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+	
+    <!--=== speciality ===-->
+    <section class="speciality">
+        <div class="container-fluid">
+            <div class="row">
+            	
+                <div class="col-lg-3 col-md-3 col-sm-4">
+                    <div class="speciality-wrap">
+                        <div><i class="ion fa fa-file-word-o"></i></div>
+                        <a href="#">文档丰富</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-3 col-sm-4">
+                    <div class="speciality-wrap">
+                        <div><i class="ion fa fa-object-group"></i></div>
+                        <a href="#">模版化</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-3 col-sm-4">
+                    <div class="speciality-wrap">
+                        <div><i class="ion fa fa-code"></i></div>
+                        <a href="#">标签化建站</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-3 col-sm-4">
+                    <div class="speciality-wrap">
+                        <div><i class="ion fa fa-github"></i></div>
+                        <a href="#">免费开源</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!--=== feature ===-->
+    <section id="feature" class="feature" >
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                	<div class="section-tag">Dreamer CMS 梦想家内容发布系统</div>
+                    <div class="section-title mb-5"><h2>模版中心</h2></div>
+                </div>
+                
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="feature-wrap">
+                        <div class="feature-image"><img src="http://localhost:8888/uploads//20190815/2dbcc0552eae41578b03f34235c71db0.jpg" class="ion ion-ios-cloud-outline"></i></div>
+                        <a href="/htmls/templates/20190815/182306d8eab44225a5ce123ad6a01ffd.html">温馨家居搭配设计css3网站模板...</a>
+                        <p></p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="feature-wrap">
+                        <div class="feature-image"><img src="http://localhost:8888/uploads//20190815/bbcb488fd42b42b4bd5af53f8c6ebcfe.jpg" class="ion ion-ios-cloud-outline"></i></div>
+                        <a href="/htmls/templates/20190815/93b0ac1621024e4682442acd646da397.html">kid儿童用品商城shop网站模板...</a>
+                        <p></p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="feature-wrap">
+                        <div class="feature-image"><img src="http://localhost:8888/uploads//20190815/6fa657689394413d9b724cfa522301e6.jpg" class="ion ion-ios-cloud-outline"></i></div>
+                        <a href="/htmls/templates/20190815/cc1b4cc70af54410a9486e7d4babd5a7.html">大气css3动画BUSINESS商务展会企业模板...</a>
+                        <p></p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="feature-wrap">
+                        <div class="feature-image"><img src="http://localhost:8888/uploads//20190815/18c8a53e1b63493b821c9ab865c4b395.jpg" class="ion ion-ios-cloud-outline"></i></div>
+                        <a href="/htmls/templates/20190815/d64d167032c84521ad21708cccc1f963.html">大气orion渐变绿色css3响应式商业模板...</a>
+                        <p></p>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="row">
+                <div class="col-12 mt-5">
+                	
+                    <div class="text-center"><a href="/htmls/templates/list-1.html" class="btn btn-primary main-btn btn-reload"><i class="fa fa-spinner fa-spin"></i> 查看更多</a></div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--=== highlight section ===-->
+    <section class="highlight-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="highlight-section-wrap text-center">
+                        <div class="highlight-section-title"><h3>Dreamer CMS 梦想家内容发布系统</h3></div>
+                        <div class="highlight-section-tag">国内首款java开发的内容发布系统，采用最流行的springboot+thymeleaf框架搭建，灵活小巧，配置简单；并且拥有丰富的文档和入门教程。</div>
+                        <ul class="list-inline">
+                        	
+                            <li class="list-inline-item"><a href="/htmls/quickstart/index.html" class="btn btn-primary main-btn bg-green">使用说明</a></li>
+                            
+                            
+                            <li class="list-inline-item"><a href="/htmls/document/index.html" class="btn btn-primary main-btn bg-main">开发文档</a></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--=== about us ===-->
+    <section id="about" class="about-us">
+        <div class="container-fluid">
+            <div class="row">
+            	
+                <div class="col-lg-12 align-self-center">
+                    <div class="about-wrap">
+                        <div class="section-tag">Dreamer CMS 梦想家内容发布系统</div>
+                        <div class="section-title"><h2>开发者</h2></div>
+                        <p>
+                            <p style="padding: 0px; margin-top: 0px; margin-bottom: 0px; font-family: &quot;Microsoft YaHei&quot;; font-size: 12px; white-space: normal; background-color: rgb(255, 255, 255); line-height: 3em;"><span style="font-size: 18px;"><span style="color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; background-color: rgb(255, 255, 255);">王俊南(QQ:153095904)；</span><br style="color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);"/><span style="color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; background-color: rgb(255, 255, 255);">个人博客：</span></span><a href="http://blog.java1234.com/" target="_blank" style="color: rgb(0, 136, 204); text-decoration: underline; font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; white-space: normal; background-color: rgb(255, 255, 255); font-size: 18px;"><span style="font-size: 18px;">http://www.itechyou.cn/</span></a><br style="color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);"/><span style="font-size: 18px;"><span style="color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; background-color: rgb(255, 255, 255);">DreamerCMS创始人；草根站长；</span><br style="color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);"/><span style="color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; background-color: rgb(255, 255, 255);">有10年的JAVA学习工作研究经验，先后参与过国家电网登高项目，企业OA项目；</span><br style="color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);"/><span style="color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; background-color: rgb(255, 255, 255);">多个政府服务平台项目，具有丰富的J2EE开发经验；</span><br style="color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);"/><span style="color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; background-color: rgb(255, 255, 255);">5年多的Java培训指导教育经验，原创教程通俗易懂，深受喜爱；</span><br style="color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);"/><span style="color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; background-color: rgb(255, 255, 255);">从事多年IT，拥有较广的人脉；&nbsp;</span></span></p><p style="padding: 0px; margin-top: 0px; margin-bottom: 0px; font-family: &quot;Microsoft YaHei&quot;; font-size: 12px; white-space: normal; background-color: rgb(255, 255, 255); line-height: 3em;"><span style="font-size: 18px;">个人名言：我喜欢程序员，他们单纯、固执、容易体会到成就感；面对压力，能够挑灯夜战不眠不休；面对困难，能够迎难而上挑战自我。他们也会感到困惑与傍徨，但每个程序员的心中都有一个比尔盖茨或是乔布斯的梦想“用智慧开创属于自己的事业”。我想说的是，其实我只是一个程序员！</span></p><p style="padding: 0px; margin-top: 0px; margin-bottom: 0px; font-family: &quot;Microsoft YaHei&quot;; font-size: 12px; white-space: normal; background-color: rgb(255, 255, 255); line-height: 3em;"><span style="font-size: 18px;"><br/></span></p><p style="padding: 0px; margin-top: 0px; margin-bottom: 0px; font-family: &quot;Microsoft YaHei&quot;; font-size: 12px; white-space: normal; background-color: rgb(255, 255, 255); line-height: 3em;"><span style="font-size: 18px;"><br/></span></p><p style="text-align: center; line-height: 2em;"><img src="/uploads/20190816/1565949537281001415.jpg" style="width: 228px; height: 228px;" title="1565949537281001415.jpg" width="228" height="228" border="0" vspace="0" alt="1565949537281001415.jpg"/><span style="font-size: 14px;">&nbsp;</span><img src="/uploads/20190816/1565949537316028864.jpg" title="1565949537316028864.jpg" width="228" height="228" border="0" vspace="0" alt="1565949537316028864.jpg" style="width: 228px; height: 228px;"/></p><p><br/></p>
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!--=== testimonial & clients ===-->
+    <section id="testimonial" class="testimonial">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title-wrap text-center">
+                        <div class="section-tag">Dreamer CMS 梦想家内容发布系统</div>
+                        <div class="section-title"><h2>好评和合作伙伴</h2></div>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-10 col-sm-12 mx-auto">
+                    <div id="testimonial-slider" class="testimonial-slider">
+                    	
+                        <div class="slider-item">
+                            <div class="testimonial-wrap mx-auto">
+                                <div class="testimon-detail">
+                                    <div class="testimon-icon"><i class="ion fa fa-smile-o"></i></div>
+                                    <strong>Dreamer CMS是企业在创立初期很好的技术基础框架</strong>
+                                    <p>Dreamer CMS是企业在创立初期很好的技术基础框架，加快公司项目开发进度，当然也可以对现有的系统进行升级</p>
+                                </div>
+                                <div class="testimon-img-wrap">
+                                    <div class="testimon-img"><img src="http://localhost:8888/uploads//20190816/ecb040a2c77348958e6fd39b1afebe18.jpg" alt="Dreamer CMS是企业在创立初期很好的技术基础框架"></div>
+                                    <div class="testimon-name">程雨</div>
+                                    <div class="testimon-tag">www.xinhudong.com.cn</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="slider-item">
+                            <div class="testimonial-wrap mx-auto">
+                                <div class="testimon-detail">
+                                    <div class="testimon-icon"><i class="ion fa fa-smile-o"></i></div>
+                                    <strong>个人开发者也可以使用Dreamer CMS承接外包项目</strong>
+                                    <p>标签化建站：不需要专业的后台开发技能，只要使用系统提供的标签，就能轻松建设网站；模版开发方便：支持在线上传模版包开发方便快捷</p>
+                                </div>
+                                <div class="testimon-img-wrap">
+                                    <div class="testimon-img"><img src="http://localhost:8888/uploads//20190816/3f3f65a75df74027b3755d155b0f29b2.png" alt="个人开发者也可以使用Dreamer CMS承接外包项目"></div>
+                                    <div class="testimon-name">王俊南</div>
+                                    <div class="testimon-tag">www.itechyou.cn</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="slider-item">
+                            <div class="testimonial-wrap mx-auto">
+                                <div class="testimon-detail">
+                                    <div class="testimon-icon"><i class="ion fa fa-smile-o"></i></div>
+                                    <strong>初学JAVA的同学可以下载源代码来进行学习交流</strong>
+                                    <p>免费完整开源：基于Apache2.0协议，源代码完全开源；初学JAVA的同学可以下载源代码来进行学习交流</p>
+                                </div>
+                                <div class="testimon-img-wrap">
+                                    <div class="testimon-img"><img src="http://localhost:8888/uploads//20190816/da8377d716dc473a8f35d7a1b1a078c4.jpg" alt="初学JAVA的同学可以下载源代码来进行学习交流"></div>
+                                    <div class="testimon-name">王亚伟</div>
+                                    <div class="testimon-tag">www.itechyou.cn</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-10 col-md-10 col-sm-12 mx-auto">
+                    <div class="client-content-wrap">
+                        <ul class="list-inline client-content-logo">
+                        	
+                            <li class="list-inline-item"><img src="http://localhost:8888/uploads//20190816/b39c908830744191b47830ac5e7d1b72.png" alt="微软" class="img-fluid"></li>
+                            
+                            <li class="list-inline-item"><img src="http://localhost:8888/uploads//20190816/ed8897c2c2ac4e61be5081584cf236ad.png" alt="iop" class="img-fluid"></li>
+                            
+                            <li class="list-inline-item"><img src="http://localhost:8888/uploads//20190816/a04e19bd311c45bebfc7a3dd2695a88c.png" alt="Yale" class="img-fluid"></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--=== products intro ===-->
+    <section id="blog" class="product" style="margin-top:50px;">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title-wrap text-center">
+                        <div class="section-tag">Dreamer CMS 梦想家内容发布系统</div>
+                        <div class="section-title"><h2>更新记录</h2></div>
+                        <div class="section-detail-para">每一次版本的升级，都凝聚了开发者的智慧与努力...</div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="product__item">
+                        <div class="card">
+                            <div class="product__content-inner card-body">
+                                <div class="product__title-price">
+                                    <a href="product-detail.html"><h5 class="card-title"><a href="/htmls/versionnotes/20190816/fb7c4cf30dd1456e8b21af621479a2e4.html">Dreamer CMS 梦想家内容发布系统v2.0.0</a></h5></a>
+                                </div>
+                                <div class="product-para">版本号：Previous Releases 2.0.0</div>
+                                <div class="product-para">发布日期：2019-08-16 10:30:57.0</div>
+                                <div class="product-para">升级说明：* 对所有自定义标签进行解析
+* 开发标签解析引擎
+* 支持扩展标签</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="product__item">
+                        <div class="card">
+                            <div class="product__content-inner card-body">
+                                <div class="product__title-price">
+                                    <a href="product-detail.html"><h5 class="card-title"><a href="/htmls/versionnotes/20190816/4f451c4797c54536869f5cf748944f9e.html">Dreamer CMS 梦想家内容发布系统v1.0.0</a></h5></a>
+                                </div>
+                                <div class="product-para">版本号：Previous Releases 1.0.1</div>
+                                <div class="product-para">发布日期：2019-08-16 10:20:53.0</div>
+                                <div class="product-para">升级说明：* 免费完整开源：基于MIT协议，源代码完全开源；
+* 标签化建站：不需要专业的后台开发技能，只要使用系统提供的标签，就能轻松建设网站；
+* 模版开发方便：支持在线上传模版包开发方便快捷；
+* 每月更新：每月进行系统升级，分享更多好用的模版与插件；</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="product__item">
+                        <div class="card">
+                            <div class="product__content-inner card-body">
+                                <div class="product__title-price">
+                                    <a href="product-detail.html"><h5 class="card-title"><a href="/htmls/versionnotes/20200619/edda8fda8cc24a00b82e3f2ccfeb521d.html">Dreamer CMS 梦想家内容发布系统v2.5.1</a></h5></a>
+                                </div>
+                                <div class="product-para">版本号：Previous Releases 2.5.1</div>
+                                <div class="product-para">发布日期：2020-06-19 08:36:16.0</div>
+                                <div class="product-para">升级说明：1、开发搜索结果标签解析
+2、优化默认模版页面
+3、修改栏目功能bug
+4、新增多环境启动功能</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-12 mt-5">
+                	
+                    <div class="text-center"><a href="/htmls/versionnotes/list-1.html" class="btn btn-primary main-btn btn-reload"><i class="fa fa-spinner fa-spin"></i> 查看更多</a></div>
+                    
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+	<!--=== call to action 2 ===-->
+<section id="action" class="call-to-action-2">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="call-to-action-wrap">
+                    <div class="call-to-action-title">
+                        <div class="text-center"><a href="https://gitee.com/isoftforce/dreamer_cms" class="btn btn-primary main-btn">源码下载</a></div>
+                        <h3>梦想家CMS内容管理系统支持码云、Github等多种渠道下载。</h3>
+                    </div>
+                    <div class="list-wrap">
+                        <ul class="list-inline applications">
+                            <li class="list-inline-item"><a href="https://gitee.com/isoftforce/dreamer_cms"><img src="/templates/default/images/app1.png" alt="Application"></a></li>
+                            <li class="list-inline-item"><a href="https://github.com/xinhudong/Dreamer_cms"><img src="/templates/default/images/app2.png" alt="Application"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--=== footer ===-->
+<footer class="footer">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-5 col-md-6 col-sm-5 align-self-center">
+            	<div>
+            		<p>
+            			Copyright © 2018 Powered by I Tech You,我教你，Dreamer CMS 梦想家内容发布系统
+            			备案号：冀ICP备19026223号
+            		</p>
+            	</div>
+
+            </div>
+            <div class="col-lg-7 col-md-6 col-sm-7 align-self-center">
+                <ul class="list-inline footer-menu">
+                	
+                    <li class="list-inline-item"><a href="/htmls/framework/index.html" title="框架简介">框架简介</a></li>
+                    
+                    <li class="list-inline-item"><a href="/htmls/versionnotes/list-1.html" title="更新记录">更新记录</a></li>
+                    
+                    <li class="list-inline-item"><a href="/htmls/document/index.html" title="开发文档">开发文档</a></li>
+                    
+                    <li class="list-inline-item"><a href="/htmls/quickstart/index.html" title="使用说明">使用说明</a></li>
+                    
+                    <li class="list-inline-item"><a href="/htmls/templates/list-1.html" title="模版中心">模版中心</a></li>
+                    
+                    <li class="list-inline-item"><a href="http://www.itechyou.cn" title="开发社区">开发社区</a></li>
+                    
+                    <li class="list-inline-item"><a href="/htmls/message/list-1.html" title="客户留言">客户留言</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+    <!--============ JavaScript ===========-->
+    <script src="/templates/default/js/jquery-3.2.1.slim.min.js"></script>
+    <script src="/templates/default/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/templates/default/js/popper.min.js"></script>
+    <script src="/templates/default/plugins/slick/slick.min.js"></script>
+    <script src="/templates/default/js/app.js"></script>
+</body>
+</html>
