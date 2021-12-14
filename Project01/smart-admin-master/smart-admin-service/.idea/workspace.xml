@@ -1,0 +1,845 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e6900118-0298-4b9c-b3df-facdc255b29b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/.browserslistrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/.env.development" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/.env.local" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/.env.pre" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/.env.prod" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/.env.sit" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/.eslintignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/.eslintrc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/.postcssrc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/.prettierrc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/.sentryclirc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/babel.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/src/App.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/src/api/employee.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/src/api/file.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/src/api/login.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/src/api/system-config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/src/api/user.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/src/assets/css/index.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/src/assets/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/src/components/employee/department-employee-selector.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/src/components/form/select-picker/SmartEnumSelectPicker.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/src/components/form/select-picker/SmartSelectPicker" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/src/components/mixin/session-mixin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/src/components/van-bar/BackNavBar.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/src/components/van-bar/RouterNavBar.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/src/config/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/src/constants/area.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/src/constants/erp/contact-company.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/src/constants/erp/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/src/constants/file.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/src/constants/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/src/constants/school.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/src/filters/filter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/src/filters/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/src/lib/cookie.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/src/lib/erp-http.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/src/lib/http.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/src/lib/local.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/src/lib/menu-func.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/src/lib/printPlugs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/src/lib/render-dom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/src/lib/smart-sentry.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/src/lib/util.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/src/lib/watermark.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/src/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/src/plugins/smart-sentry.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/src/plugins/smart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/src/plugins/vant.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/src/router/dashboard/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/src/router/develop/develop.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/src/router/error/error.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/src/router/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/src/router/login/login.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/src/router/router-const.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/src/router/routers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/src/router/user/user.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/src/store/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/src/store/module/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/src/store/module/user.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/src/themes/index.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/src/utils/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/src/utils/request.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/src/utils/validate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/src/views/dashboard/dashboard.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/src/views/develop/config.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/src/views/error/404.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/src/views/login/login.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/src/views/user/change-password.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/src/views/user/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-h5/vue.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/doc/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/SmartAdminApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/common/anno/ApiModelPropertyEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/common/anno/DataScope.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/common/anno/NoNeedLogin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/common/anno/NoValidPrivilege.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/common/anno/OperateLog.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/common/constant/CommentSortTypeEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/common/constant/JudgeEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/common/constant/ResponseCodeConst.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/common/controller/BaseController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/common/domain/BaseEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/common/domain/BaseEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/common/domain/ITask.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/common/domain/OrderItemDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/common/domain/PageParamDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/common/domain/PageResultDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/common/domain/ResponseDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/common/domain/ValidateList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/common/exception/SmartBusinessException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/common/exception/SmartResponseCodeException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/common/heartbeat/AbstractHeartBeatCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/common/heartbeat/HeartBeatConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/common/heartbeat/HeartBeatLogger.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/common/heartbeat/HeartBeatRecordCommendInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/common/heartbeat/HeartBeatRecordDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/common/heartbeat/HeatBeatRecordHelper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/common/heartbeat/IpUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/common/heartbeat/StringUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/common/json/LongJsonDeserializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/common/json/LongJsonSerializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/common/kaptcha/KaptchaColor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/common/kaptcha/KaptchaNoise.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/common/kaptcha/KaptchaWordRenderer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/common/reload/SmartReloadManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/common/reload/SmartReloadScheduler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/common/reload/abstracts/AbstractSmartReloadCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/common/reload/abstracts/AbstractSmartReloadCommand4Spring.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/common/reload/annotation/SmartReload.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/common/reload/domain/AbstractSmartReloadObject.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/common/reload/domain/AnnotationReloadObject.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/common/reload/domain/InterfaceReloadObject.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/common/reload/domain/entity/ReloadItem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/common/reload/domain/entity/SmartReloadResult.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/common/reload/interfaces/SmartReloadCommandInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/common/reload/interfaces/SmartReloadThreadLogger.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/common/reload/interfaces/SmartReloadable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/common/swagger/SmartSwaggerApiModelEnumPlugin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/common/validator/bigdecimal/BigDecimalValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/common/validator/bigdecimal/CheckBigDecimal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/common/validator/bigdecimal/ComparisonSymbolEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/common/validator/en/CheckEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/common/validator/en/EnumValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/config/SmartAdminWebAppConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/config/SmartDruidDataSourceConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/config/SmartHeartBeatConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/config/SmartKaptchaConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/config/SmartMybatisPlusConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/config/SmartRedisConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/config/SmartReloadConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/config/SmartRestTemplateConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/config/SmartSwaggerApiModelEnumConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/config/SmartSwaggerDynamicGroupConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/config/SmartWebSocketConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/config/SystemEnvironmentCondition.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/constant/CommonConst.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/constant/SmartReloadTagConst.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/constant/SwaggerTagConst.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/constant/SystemEnvironmentEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/handler/SmartGlobalExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/handler/SmartOperateLogAspect.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/interceptor/SmartAuthenticationInterceptor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/listener/SmartAdminStartupRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/business/email/EmailController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/business/email/EmailDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/business/email/EmailSendStatusEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/business/email/EmailService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/business/email/domain/dto/EmailConfigDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/business/email/domain/dto/EmailDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/business/email/domain/dto/EmailQueryDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/business/email/domain/dto/EmailVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/business/email/domain/entity/EmailEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/business/log/LogService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/business/log/orderoperatelog/OrderOperateLogController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/business/log/orderoperatelog/OrderOperateLogDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/business/log/orderoperatelog/OrderOperateLogService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/business/log/orderoperatelog/constant/OrderOperateLogDefaultEmpEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/business/log/orderoperatelog/constant/OrderOperateLogOperateTypeConst.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/business/log/orderoperatelog/constant/OrderOperateLogOrderTypeEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/business/log/orderoperatelog/domain/dto/OrderOperateLogSaveDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/business/log/orderoperatelog/domain/dto/SupplierOrderOperateVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/business/log/orderoperatelog/domain/entity/OrderOperateLogEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/business/log/orderoperatelog/domain/vo/OrderOperateLogVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/business/log/userloginlog/UserLoginLogController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/business/log/userloginlog/UserLoginLogDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/business/log/userloginlog/UserLoginLogService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/business/log/userloginlog/domain/UserLoginLogDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/business/log/userloginlog/domain/UserLoginLogEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/business/log/userloginlog/domain/UserLoginLogQueryDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/business/log/useroperatelog/UserOperateLogController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/business/log/useroperatelog/UserOperateLogDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/business/log/useroperatelog/UserOperateLogService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/business/log/useroperatelog/domain/UserOperateLogDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/business/log/useroperatelog/domain/UserOperateLogEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/business/log/useroperatelog/domain/UserOperateLogQueryDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/business/notice/NoticeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/business/notice/NoticeManage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/business/notice/NoticeService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/business/notice/dao/NoticeDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/business/notice/dao/NoticeReceiveRecordDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/business/notice/domain/dto/NoticeAddDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/business/notice/domain/dto/NoticeDetailVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/business/notice/domain/dto/NoticeQueryDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/business/notice/domain/dto/NoticeReadCountDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/business/notice/domain/dto/NoticeReceiveDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/business/notice/domain/dto/NoticeReceiveQueryDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/business/notice/domain/dto/NoticeUpdateDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/business/notice/domain/dto/NoticeVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/business/notice/domain/entity/NoticeEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/business/notice/domain/entity/NoticeReceiveRecordEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/business/peony/controller/PeonyController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/business/peony/dao/PeonyDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/business/peony/domain/dto/PeonyAddDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/business/peony/domain/dto/PeonyQueryDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/business/peony/domain/dto/PeonyUpdateDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/business/peony/domain/entity/PeonyEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/business/peony/domain/vo/PeonyExcelVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/business/peony/domain/vo/PeonyVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/business/peony/service/PeonyService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/codegenerator/constant/SqlOperateTypeEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/codegenerator/dao/TableDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/codegenerator/domain/CodeGeneratorDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/codegenerator/domain/CodeGeneratorQueryColumnDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/codegenerator/domain/ColumnVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/codegenerator/domain/QueryFieldVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/codegenerator/service/CodeGeneratorComponent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/codegenerator/service/CodeGeneratorService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/file/FileController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/file/FileDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/file/constant/FileModuleTypeEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/file/constant/FileResponseCodeConst.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/file/constant/FileServiceNameConst.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/file/constant/FileServiceTypeEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/file/domain/dto/FileAddDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/file/domain/dto/FileDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/file/domain/dto/FileQueryDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/file/domain/dto/OSSConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/file/domain/entity/FileEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/file/domain/vo/FileVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/file/domain/vo/UploadVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/file/service/FileService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/file/service/FileServiceAliYun.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/file/service/FileServiceLocal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/file/service/FileServiceQiNiuYun.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/file/service/IFileService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/heartbeat/HeartBeatController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/heartbeat/HeartBeatRecordDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/heartbeat/HeartBeatRecordEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/heartbeat/HeartBeatRecordVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/heartbeat/HeartBeatService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/idgenerator/IdGeneratorDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/idgenerator/IdGeneratorManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/idgenerator/IdGeneratorService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/idgenerator/constant/IdGeneratorEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/idgenerator/constant/IdGeneratorRuleTypeEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/idgenerator/domain/IdGeneratorEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/idgenerator/domain/IdGeneratorLastNumberDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/idgenerator/domain/IdGeneratorPOJO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/idgenerator/domain/IdGeneratorRecordDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/quartz/constant/QuartzConst.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/quartz/constant/TaskResultEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/quartz/constant/TaskStatusEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/quartz/controller/QuartzController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/quartz/dao/QuartzTaskDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/quartz/dao/QuartzTaskLogDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/quartz/domain/dto/QuartzLogQueryDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/quartz/domain/dto/QuartzQueryDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/quartz/domain/dto/QuartzTaskDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/quartz/domain/dto/QuartzTaskLogVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/quartz/domain/dto/QuartzTaskVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/quartz/domain/entity/QuartzTaskEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/quartz/domain/entity/QuartzTaskLogEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/quartz/service/QuartzTask.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/quartz/service/QuartzTaskLogService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/quartz/service/QuartzTaskService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/quartz/task/test/Example.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/smartreload/SmartReloadCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/smartreload/SmartReloadController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/smartreload/SmartReloadService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/smartreload/dao/ReloadItemDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/smartreload/dao/ReloadResultDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/smartreload/domain/dto/ReloadItemUpdateDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/smartreload/domain/dto/ReloadItemVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/smartreload/domain/dto/ReloadResultVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/smartreload/domain/entity/ReloadItemEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/smartreload/domain/entity/ReloadResultEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/websocket/MessageTypeEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/websocket/WebSocketServer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/websocket/domain/MessageCommonDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/websocket/domain/MessageDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/support/websocket/domain/WebSocketHeartBeatDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/datascope/DataScopeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/datascope/DataScopeRoleDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/datascope/MyBatisPlugin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/datascope/constant/DataScopeTypeEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/datascope/constant/DataScopeViewTypeEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/datascope/constant/DataScopeWhereInTypeEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/datascope/domain/dto/DataScopeAndViewTypeVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/datascope/domain/dto/DataScopeBatchSetDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/datascope/domain/dto/DataScopeBatchSetRoleDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/datascope/domain/dto/DataScopeDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/datascope/domain/dto/DataScopeSelectVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/datascope/domain/dto/DataScopeSqlConfigDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/datascope/domain/dto/DataScopeViewTypeVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/datascope/domain/entity/DataScopeRoleEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/datascope/service/DataScopeService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/datascope/service/DataScopeSqlConfigService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/datascope/service/DataScopeViewService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/datascope/strategy/DataScopePowerStrategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/department/DepartmentController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/department/DepartmentDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/department/DepartmentResponseCodeConst.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/department/DepartmentService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/department/DepartmentTreeService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/department/domain/dto/DepartmentCreateDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/department/domain/dto/DepartmentUpdateDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/department/domain/dto/DepartmentVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/department/domain/entity/DepartmentEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/employee/EmployeeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/employee/EmployeeDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/employee/EmployeeService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/employee/constant/EmployeeResponseCodeConst.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/employee/constant/EmployeeStatusEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/employee/domain/bo/EmployeeBO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/employee/domain/dto/EmployeeAddDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/employee/domain/dto/EmployeeBaseDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/employee/domain/dto/EmployeeBatchUpdateStatusDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/employee/domain/dto/EmployeeDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/employee/domain/dto/EmployeeLoginFormDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/employee/domain/dto/EmployeeQueryDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/employee/domain/dto/EmployeeQueryExportDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/employee/domain/dto/EmployeeUpdateDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/employee/domain/dto/EmployeeUpdatePwdDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/employee/domain/dto/EmployeeUpdateRolesDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/employee/domain/entity/EmployeeEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/employee/domain/vo/EmployeeVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/login/LoginController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/login/LoginResponseCodeConst.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/login/LoginService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/login/LoginTokenService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/login/domain/KaptchaVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/login/domain/LoginCacheDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/login/domain/LoginDetailVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/login/domain/LoginPrivilegeDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/login/domain/RequestTokenBO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/position/PositionController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/position/PositionDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/position/PositionResponseCodeConst.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/position/PositionService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/position/domain/dto/PositionAddDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/position/domain/dto/PositionQueryDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/position/domain/dto/PositionRelationAddDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/position/domain/dto/PositionRelationQueryDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/position/domain/dto/PositionRelationResultDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/position/domain/dto/PositionResultVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/position/domain/dto/PositionUpdateDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/position/domain/entity/PositionEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/position/domain/entity/PositionRelationEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/privilege/constant/PrivilegeResponseCodeConst.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/privilege/constant/PrivilegeTypeEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/privilege/controller/PrivilegeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/privilege/dao/PrivilegeDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/privilege/domain/dto/PrivilegeFunctionDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/privilege/domain/dto/PrivilegeFunctionVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/privilege/domain/dto/PrivilegeMenuDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/privilege/domain/dto/PrivilegeMenuVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/privilege/domain/dto/PrivilegeRequestUrlVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/privilege/domain/entity/PrivilegeEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/privilege/service/PrivilegeEmployeeService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/privilege/service/PrivilegeRequestUrlService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/privilege/service/PrivilegeService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/role/basic/RoleController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/role/basic/RoleDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/role/basic/RoleResponseCodeConst.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/role/basic/RoleService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/role/basic/domain/dto/RoleAddDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/role/basic/domain/dto/RoleBatchDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/role/basic/domain/dto/RoleQueryDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/role/basic/domain/dto/RoleSelectedVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/role/basic/domain/dto/RoleUpdateDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/role/basic/domain/dto/RoleVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/role/basic/domain/entity/RoleEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/role/roleemployee/RoleEmployeeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/role/roleemployee/RoleEmployeeDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/role/roleemployee/RoleEmployeeService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/role/roleemployee/domain/RoleEmployeeDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/role/roleemployee/domain/RoleEmployeeEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/role/roleprivilege/RolePrivilegeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/role/roleprivilege/RolePrivilegeDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/role/roleprivilege/RolePrivilegeService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/role/roleprivilege/domain/dto/RolePrivilegeDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/role/roleprivilege/domain/dto/RolePrivilegeSimpleDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/role/roleprivilege/domain/dto/RolePrivilegeTreeVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/role/roleprivilege/domain/entity/RolePrivilegeEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/systemconfig/SystemConfigController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/systemconfig/SystemConfigDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/systemconfig/SystemConfigService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/systemconfig/constant/SystemConfigDataType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/systemconfig/constant/SystemConfigEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/systemconfig/constant/SystemConfigResponseCodeConst.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/systemconfig/domain/dto/SystemConfigAddDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/systemconfig/domain/dto/SystemConfigDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/systemconfig/domain/dto/SystemConfigQueryDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/systemconfig/domain/dto/SystemConfigUpdateDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/systemconfig/domain/dto/SystemConfigVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/module/system/systemconfig/domain/entity/SystemConfigEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/third/SmartApplicationContext.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/third/SmartRedisService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/util/SmartBaseEnumUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/util/SmartBeanUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/util/SmartBigDecimalUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/util/SmartDateUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/util/SmartDigestUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/util/SmartEasyPoiExcelUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/util/SmartFileUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/util/SmartHttpUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/util/SmartIPUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/util/SmartPageUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/util/SmartQuartzUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/util/SmartRequestTokenUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/util/SmartSendMailUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/util/SmartStringUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/util/SmartThreadFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/util/SmartVerificationUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/util/excel/SmartExcel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/util/excel/SmartExcelFileType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/util/excel/SmartExcelReader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/java/net/lab1024/smartadmin/util/excel/SmartSheet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/resources/banner.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/resources/dev/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/resources/dev/log4j2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/resources/dev/spy.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/resources/mapper/business/email/EmailMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/resources/mapper/business/log/OrderOperateLogMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/resources/mapper/business/log/UserLoginLogMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/resources/mapper/business/log/UserOperateLogMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/resources/mapper/business/notice/NoticeMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/resources/mapper/business/notice/NoticeReceiveRecordMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/resources/mapper/business/peony/PeonyMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/resources/mapper/support/codegenerator/TableMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/resources/mapper/support/file/FileMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/resources/mapper/support/heartbeat/HeartBeatRecordMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/resources/mapper/support/idgenerator/IdGeneratorMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/resources/mapper/support/quartz/QuartzTaskLogMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/resources/mapper/support/quartz/QuartzTaskMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/resources/mapper/support/smartreload/ReloadItemMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/resources/mapper/support/smartreload/ReloadResultMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/resources/mapper/system/datascope/DataScopeRoleMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/resources/mapper/system/department/DepartmentMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/resources/mapper/system/employee/EmployeeMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/resources/mapper/system/position/PositionMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/resources/mapper/system/privilege/PrivilegeMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/resources/mapper/system/role/RoleEmployeeMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/resources/mapper/system/role/RoleMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/resources/mapper/system/role/RolePrivilegeMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/resources/mapper/system/systemconfig/SystemConfigMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/resources/pre/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/resources/pre/log4j2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/resources/prod/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/resources/prod/log4j2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/resources/sit/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/resources/sit/log4j2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/resources/sit/spy.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/resources/sql/quartz_mysql_2.3.0.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/resources/sql/smart-admin.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/resources/templates/codegenerator/java/AddDTO.java.vm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/resources/templates/codegenerator/java/Controller.java.vm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/resources/templates/codegenerator/java/Dao.java.vm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/resources/templates/codegenerator/java/Dao.xml.vm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/resources/templates/codegenerator/java/Entity.java.vm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/resources/templates/codegenerator/java/ExcelVO.java.vm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/resources/templates/codegenerator/java/QueryDTO.java.vm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/resources/templates/codegenerator/java/Service.java.vm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/resources/templates/codegenerator/java/UpdateDTO.java.vm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/resources/templates/codegenerator/java/VO.java.vm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/resources/templates/codegenerator/web/Api.js.vm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/resources/templates/codegenerator/web/List.vue.vm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/resources/templates/codegenerator/web/ListForm.vue.vm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/main/resources/templates/codegenerator/web/Router.js.vm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/test/java/net/lab1024/smartadmin/BaseTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/test/java/net/lab1024/smartadmin/SmartAdminApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-admin-api/src/test/java/net/lab1024/smartadmin/module/support/codegenerator/CodeGeneratorServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/.babelrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/.env.development" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/.env.local" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/.env.prod" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/.env.sit" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/.eslintignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/.eslintrc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/.postcssrc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/cypress.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/doc/notice.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/App.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/api/data-scope.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/api/department.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/api/email.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/api/employee.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/api/file.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/api/heart-beat.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/api/login.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/api/notice.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/api/online-user.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/api/peony.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/api/position.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/api/privilege.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/api/role.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/api/smart-reload.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/api/system-config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/api/task-manage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/api/user-log.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/api/user.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/assets/icons/demo.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/assets/icons/demo_index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/assets/icons/download (4)/font_1299963_2zqwx2axi0j/demo.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/assets/icons/download (4)/font_1299963_2zqwx2axi0j/demo_index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/assets/icons/download (4)/font_1299963_2zqwx2axi0j/iconfont.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/assets/icons/download (4)/font_1299963_2zqwx2axi0j/iconfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/assets/icons/download (4)/font_1299963_2zqwx2axi0j/iconfont.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/assets/icons/download (4)/font_1299963_2zqwx2axi0j/iconfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/assets/icons/download (4)/font_1299963_2zqwx2axi0j/iconfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/assets/icons/download (4)/font_1299963_2zqwx2axi0j/iconfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/assets/icons/download (4)/font_1299963_2zqwx2axi0j/iconfont.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/assets/icons/iconfont.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/assets/icons/iconfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/assets/icons/iconfont.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/assets/icons/iconfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/assets/icons/iconfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/assets/icons/iconfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/assets/icons/iconfont.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/assets/images/default_icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/assets/images/error-page/error-401.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/assets/images/error-page/error-404.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/assets/images/error-page/error-500.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/assets/images/icon-qr-qq-wechat.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/assets/images/icon-social-bilibili.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/assets/images/icon-social-juejin.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/assets/images/icon-social-twitter.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/assets/images/icon-social-zhihu.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/assets/images/login-alipay.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/assets/images/login-bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/assets/images/login-logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/assets/images/login-sina.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/assets/images/login-taobao.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/assets/images/login_desc_bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/assets/images/login_logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/assets/images/logo-min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/assets/images/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/assets/images/logo1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/assets/images/message.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/assets/images/shadow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/assets/images/slider/sub_slider_active.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/assets/images/slider/sub_slider_default.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/assets/style/lib/animate.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/components/active-plate/active-plate.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/components/charts/bar.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/components/charts/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/components/charts/pie.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/components/charts/theme.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/components/common-icon/common-icon.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/components/common-icon/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/components/count-to/count-to.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/components/count-to/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/components/count-to/index.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/components/editor/editor.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/components/editor/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/components/employee/employee-selector.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/components/icons/icons.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/components/icons/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/components/main/components/a-back-top/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/components/main/components/a-back-top/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/components/main/components/fullscreen/fullscreen.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/components/main/components/fullscreen/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/components/main/components/header-bar/custom-bread-crumb/custom-bread-crumb.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/components/main/components/header-bar/custom-bread-crumb/custom-bread-crumb.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/components/main/components/header-bar/custom-bread-crumb/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/components/main/components/header-bar/header-bar.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/components/main/components/header-bar/header-bar.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/components/main/components/header-bar/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/components/main/components/header-bar/sider-trigger/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/components/main/components/header-bar/sider-trigger/sider-trigger.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/components/main/components/header-bar/sider-trigger/sider-trigger.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/components/main/components/language/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/components/main/components/language/language.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/components/main/components/notice/notice.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/components/main/components/side-menu/collapsed-menu.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/components/main/components/side-menu/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/components/main/components/side-menu/item-mixin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/components/main/components/side-menu/mixin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/components/main/components/side-menu/side-menu-item.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/components/main/components/side-menu/side-menu.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/components/main/components/side-menu/side-menu.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/components/main/components/tags-nav/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/components/main/components/tags-nav/tags-nav.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/components/main/components/tags-nav/tags-nav.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/components/main/components/user/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/components/main/components/user/user.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/components/main/components/user/user.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/components/main/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/components/main/main.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/components/main/main.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/components/smart-admin-ad/ad.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/components/smart-admin-ad/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/components/tables/edit.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/components/tables/handle-btns.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/components/tables/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/components/tables/index.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/components/tables/tables.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/config/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/constants/file.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/constants/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/constants/login.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/constants/notice.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/constants/privilege.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/constants/table-page.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/directives/directives.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/directives/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/directives/module/clipboard.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/directives/module/draggable.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/directives/module/privilege.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/filters/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/lib/cookie.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/lib/http.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/lib/local.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/lib/menu-func.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/lib/printPlugs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/lib/render-dom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/lib/table-action.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/lib/util.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/locale/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/locale/lang/en-US.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/locale/lang/zh-CN.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/locale/lang/zh-TW.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/main.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/plugins/error-store/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/plugins/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/router/before-close.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/router/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/router/module/business/email.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/router/module/business/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/router/module/business/keep-alive.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/router/module/business/notice.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/router/module/business/peony.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/router/module/business/three-router.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/router/module/error.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/router/module/home.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/router/module/support/api-doc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/router/module/support/heart-beat.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/router/module/support/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/router/module/support/monitor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/router/module/support/reload.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/router/module/support/task.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/router/module/system/employee.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/router/module/system/file.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/router/module/system/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/router/module/system/system-setting.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/router/module/system/user-log.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/router/routers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/store/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/store/module/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/store/module/notice.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/store/module/user.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/themes/ReadMe.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/themes/index.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/views/business/email/email-list.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/views/business/email/send-mail.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/views/business/keep-alive/add-content.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/views/business/keep-alive/content-list.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/views/business/notice/notice-detail.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/views/business/notice/notice-list.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/views/business/notice/person-notice.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/views/business/peony/components/peony-list-form.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/views/business/peony/peony-list.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/views/business/three-level-router/three-level-router-view.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/views/error-page/401.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/views/error-page/404.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/views/error-page/500.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/views/error-page/back-btn-group.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/views/error-page/error-content.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/views/error-page/error.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/views/home/components/card.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/views/home/components/chart-bar.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/views/home/components/chart-funnel.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/views/home/components/chart-gauge.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/views/home/components/chart-line.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/views/home/components/chart-pie.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/views/home/components/home-circle.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/views/home/components/home-progress.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/views/home/components/theme.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/views/home/home.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/views/home/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/views/login/canvas.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/views/login/components/login-form.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/views/login/login.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/views/login/login.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/views/support/api-doc/swagger.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/views/support/heart-beat/heart-beat-list.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/views/support/monitor/online-user.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/views/support/monitor/sql.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/views/support/reload/smart-reload/smart-reload-list.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/views/support/task/task-list.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/views/system/employee/components/department-employee-tree-item/department-employee-tree-item.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/views/system/employee/components/department-employee-tree/department-employee-tree.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/views/system/employee/position/position-list.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/views/system/employee/role-employee/components/employee-table-add/employee-table-add.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/views/system/employee/role-employee/components/employee-table-detail/employee-table-detail.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/views/system/employee/role-employee/components/employee-table/employee-table.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/views/system/employee/role-employee/role-employee-manage.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/views/system/employee/role/components/role-data-scope/role-data-scope.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/views/system/employee/role/components/role-list/role-list.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/views/system/employee/role/components/role-tree/role-tree.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/views/system/employee/role/role-manage.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/views/system/file/file-list.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/views/system/system-setting/system-config/system-config.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/views/system/system-setting/system-privilege/components/privilege-form.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/views/system/system-setting/system-privilege/system-privilege.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/views/system/user-log/user-login-log.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/views/system/user-log/user-operate-log.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/src/views/three-router/three-content.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/tests/e2e/.eslintrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/tests/e2e/plugins/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/tests/e2e/specs/test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/tests/e2e/support/commands.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/tests/e2e/support/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/tests/unit/.eslintrc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/tests/unit/HelloWorld.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-admin-web/vue.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../代码规范/api接口规范.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../代码规范/front-standard-guide.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../代码规范/java-standard-guide.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../快速部署/README.md" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="userSettingsFile" value="D:\smartadmin_repository\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="21drOFzVixo2ovl3X7CT6y0o8qY" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RunManager">
+    <configuration name="SmartAdminApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="smart-admin-api" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="net.lab1024.smartadmin.SmartAdminApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e6900118-0298-4b9c-b3df-facdc255b29b" name="Default Changelist" comment="" />
+      <created>1638281771973</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1638281771973</updated>
+      <workItem from="1638281773347" duration="291000" />
+      <workItem from="1639470719524" duration="285000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="767" y="284" key="FileChooserDialogImpl" timestamp="1638281793903">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="767" y="284" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1638281793903" />
+    <state width="1279" height="240" key="GridCell.Tab.0.bottom" timestamp="1638282065364">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1279" height="240" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1638282065364" />
+    <state width="1279" height="240" key="GridCell.Tab.0.center" timestamp="1638282065364">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1279" height="240" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1638282065364" />
+    <state width="1279" height="240" key="GridCell.Tab.0.left" timestamp="1638282065364">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1279" height="240" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1638282065364" />
+    <state width="1279" height="240" key="GridCell.Tab.0.right" timestamp="1638282065364">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1279" height="240" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1638282065364" />
+    <state width="1279" height="240" key="GridCell.Tab.1.bottom" timestamp="1638282065365">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1279" height="240" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1638282065365" />
+    <state width="1279" height="240" key="GridCell.Tab.1.center" timestamp="1638282065364">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1279" height="240" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1638282065364" />
+    <state width="1279" height="240" key="GridCell.Tab.1.left" timestamp="1638282065364">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1279" height="240" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1638282065364" />
+    <state width="1279" height="240" key="GridCell.Tab.1.right" timestamp="1638282065364">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1279" height="240" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1638282065364" />
+    <state x="490" y="158" key="SettingsEditor" timestamp="1638281818750">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="490" y="158" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1638281818750" />
+    <state x="0" y="0" key="com.intellij.ide.util.TipDialog" timestamp="1639470719344">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="0" y="0" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1639470719344" />
+  </component>
+</project>
