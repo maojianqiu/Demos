@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+			http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+			http://www.springframework.org/schema/mvc
+    		http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-4.0.xsd
+           http://www.springframework.org/schema/aop
+           http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+           http://www.springframework.org/schema/tx
+           http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
+
+    <!-- 安全管理器 -->
+    <bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
+        <property name="realm" ref="userShiroRealm"/>
+    </bean>
+
+    <!-- 自定义凭证(密码)匹配器 -->
+    <bean id="credentialsMatcher" class="org.vae.shiro.BugCredentialsMatcher"></bean>
+
+    <!-- 自定义域 -->
+    <bean id="userShiroRealm" class="org.vae.shiro.UserShiroRealm">
+        <property name="userService" ref="userService"/>
+        <property name="credentialsMatcher" ref="credentialsMatcher"/>
+        <property name="cachingEnabled" value="true"/>
+    </bean>
+
+
+    <!-- 自定义登录验证过滤器 -->
+    <bean id="loginCheckPermissionFilter" class="org.vae.filter.LoginCheckPermissionFilter"></bean>
+
+    <!-- Shiro的web过滤器 -->
+    <bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
+        <property name="securityManager" ref="securityManager"></property>
+        <property name="unauthorizedUrl" value="/index.jsp"></property>
+        <property name="filters">
+            <map>
+                <entry key="authc" value-ref="loginCheckPermissionFilter"></entry>
+            </map>
+        </property>
+        <property name="filterChainDefinitions">
+            <value>
+                /index.jsp = anon
+                /unauthorized.jsp = anon
+                /user/checkLogin = anon
+                /user/queryUserInfo = authc
+                /user/logout = anon
+                /user/other = anon
+                /pubApi/** = anon
+            </value>
+        </property>
+    </bean>
+
+</beans>

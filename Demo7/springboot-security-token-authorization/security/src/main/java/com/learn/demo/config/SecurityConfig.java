@@ -71,10 +71,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .exceptionHandling()
                 .accessDeniedHandler(restfulAccessDeniedHandler())
                 .authenticationEntryPoint(restAuthenticationEntryPoint())
-                .and().logout().logoutUrl("/admin/logout").invalidateHttpSession(true);
+                .and().logout().logoutUrl("/admin/logout").invalidateHttpSession(true)
                 // 自定义权限拦截器JWT过滤器
-//                .and()
-//                .addFilterBefore(jwtAuthenticationTokenFilter(), UsernamePasswordAuthenticationFilter.class);
+                .and()
+                .addFilterBefore(jwtAuthenticationTokenFilter(), UsernamePasswordAuthenticationFilter.class);
         //有动态权限配置时添加动态权限校验过滤器
         if (dynamicSecurityService != null) {
             registry.and().addFilterBefore(dynamicSecurityFilter(), FilterSecurityInterceptor.class);
@@ -92,16 +92,16 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         return new BCryptPasswordEncoder();
     }
 
-//    @Bean
-//    public JwtAuthenticationTokenFilter jwtAuthenticationTokenFilter() {
-//        return new JwtAuthenticationTokenFilter();
-//    }
+    @Bean
+    public JwtAuthenticationTokenFilter jwtAuthenticationTokenFilter() {
+        return new JwtAuthenticationTokenFilter();
+    }
 
-//    @Bean
-//    @Override
-//    public AuthenticationManager authenticationManagerBean() throws Exception {
-//        return super.authenticationManagerBean();
-//    }
+    @Bean
+    @Override
+    public AuthenticationManager authenticationManagerBean() throws Exception {
+        return super.authenticationManagerBean();
+    }
 
     @Bean
     public RestfulAccessDeniedHandler restfulAccessDeniedHandler() {

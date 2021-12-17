@@ -30,8 +30,8 @@ public class UmsRoleServiceImpl implements UmsRoleService {
     private UmsRoleResourceRelationMapper roleResourceRelationMapper;
     @Autowired
     private UmsRoleDao roleDao;
-    @Autowired
-    private UmsAdminCacheService adminCacheService;
+//    @Autowired
+//    private UmsAdminCacheService adminCacheService;
 
     @Override
     public int create(UmsRole role) {
@@ -52,7 +52,7 @@ public class UmsRoleServiceImpl implements UmsRoleService {
         UmsRoleExample example = new UmsRoleExample();
         example.createCriteria().andIdIn(ids);
         int count = roleMapper.deleteByExample(example);
-        adminCacheService.delResourceListByRoleIds(ids);
+//        adminCacheService.delResourceListByRoleIds(ids);
         return count;
     }
 
@@ -115,7 +115,7 @@ public class UmsRoleServiceImpl implements UmsRoleService {
             relation.setResourceId(resourceId);
             roleResourceRelationMapper.insert(relation);
         }
-        adminCacheService.delResourceListByRole(roleId);
+//        adminCacheService.delResourceListByRole(roleId);
         return resourceIds.size();
     }
 }

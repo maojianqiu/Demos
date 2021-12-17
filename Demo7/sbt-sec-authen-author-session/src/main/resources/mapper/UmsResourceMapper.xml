@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.vae.dao.UmsUserRoleRelationDao">
+    <resultMap id="BaseResultMap" type="com.vae.domain.model.UmsResource">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+        <result column="url" jdbcType="VARCHAR" property="url"/>
+        <result column="description" jdbcType="VARCHAR" property="description"/>
+        <result column="category_id" jdbcType="BIGINT" property="categoryId"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        id, create_time, name, url, description, category_id
+    </sql>
+
+
+    <select id="getResourceList" resultType="com.vae.domain.model.UmsResource">
+        SELECT
+			ur.id id,
+			ur.create_time createTime,
+			ur.`name` `name`,
+			ur.url url,
+			ur.description description,
+			ur.category_id categoryId
+        FROM aa_session_user_role_relation ar
+        LEFT JOIN aa_session_user u on ar.admin_id = u.id
+        LEFT JOIN aa_session_role r ON ar.role_id = r.id
+        LEFT JOIN aa_session_role_resource_relation rrr ON r.id = rrr.role_id
+        LEFT JOIN aa_session_resource ur ON ur.id = rrr.resource_id
+        WHERE
+        u.user_name = #{username}
+        AND ur.id IS NOT NULL
+        GROUP BY
+        ur.id
+    </select>
+
+
+    <select id="getAllResource" parameterType="com.vae.domain.model.UmsResource" resultMap="BaseResultMap">
+        select
+        distinct
+        <include refid="Base_Column_List"/>
+        from aa_session_resource
+    </select>
+
+
+</mapper>

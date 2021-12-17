@@ -1,0 +1,360 @@
+2021-11-26 09:32:30.557  INFO 5588 --- [main] com.vae.Application                      : Starting Application using Java 1.8.0_281 on SKY-20210218KET with PID 5588 (E:\PycharmProjects\demo\Demo7\sbt-sec-authen-author-session\target\classes started by Administrator in E:\PycharmProjects\demo\Demo7\sbt-sec-authen-author-session)
+2021-11-26 09:32:30.560  INFO 5588 --- [main] com.vae.Application                      : The following profiles are active: dev
+2021-11-26 09:32:35.386  INFO 5588 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2021-11-26 09:32:35.403  INFO 5588 --- [main] o.a.coyote.http11.Http11NioProtocol      : Initializing ProtocolHandler ["http-nio-8000"]
+2021-11-26 09:32:35.404  INFO 5588 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-26 09:32:35.405  INFO 5588 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
+2021-11-26 09:32:35.615  INFO 5588 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-26 09:32:35.616  INFO 5588 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4638 ms
+2021-11-26 09:32:36.724 ERROR 5588 --- [main] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'securityConfig' defined in file [E:\PycharmProjects\demo\Demo7\sbt-sec-authen-author-session\target\classes\com\vae\configuration\spring\security\SecurityConfig.class]: Unsatisfied dependency expressed through constructor parameter 7; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'securityConfig': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2021-11-26 09:32:36.894  INFO 5588 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-11-26 09:32:36.899  WARN 5588 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+2021-11-26 09:32:36.936  INFO 5588 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-11-26 09:32:37.055 ERROR 5588 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+┌──->──┐
+|  securityConfig defined in file [E:\PycharmProjects\demo\Demo7\sbt-sec-authen-author-session\target\classes\com\vae\configuration\spring\security\SecurityConfig.class]
+└──<-──┘
+
+
+2021-11-26 09:34:12.726  INFO 3840 --- [main] com.vae.Application                      : Starting Application using Java 1.8.0_281 on SKY-20210218KET with PID 3840 (E:\PycharmProjects\demo\Demo7\sbt-sec-authen-author-session\target\classes started by Administrator in E:\PycharmProjects\demo\Demo7\sbt-sec-authen-author-session)
+2021-11-26 09:34:12.737  INFO 3840 --- [main] com.vae.Application                      : The following profiles are active: dev
+2021-11-26 09:34:15.012  INFO 3840 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2021-11-26 09:34:15.030  INFO 3840 --- [main] o.a.coyote.http11.Http11NioProtocol      : Initializing ProtocolHandler ["http-nio-8000"]
+2021-11-26 09:34:15.032  INFO 3840 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-26 09:34:15.032  INFO 3840 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
+2021-11-26 09:34:15.166  INFO 3840 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-26 09:34:15.166  INFO 3840 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2234 ms
+2021-11-26 09:34:15.850  WARN 3840 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'restSecurityMetadataSource': Unsatisfied dependency expressed through field 'restSecurityService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.vae.configuration.spring.security.authorization.RestSecurityService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2021-11-26 09:34:15.854  INFO 3840 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-11-26 09:34:15.868  INFO 3840 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-11-26 09:34:15.898 ERROR 3840 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field restSecurityService in com.vae.configuration.spring.security.authorization.RestSecurityMetadataSource required a bean of type 'com.vae.configuration.spring.security.authorization.RestSecurityService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.vae.configuration.spring.security.authorization.RestSecurityService' in your configuration.
+
+2021-11-26 09:36:59.926  INFO 5804 --- [main] com.vae.Application                      : Starting Application using Java 1.8.0_281 on SKY-20210218KET with PID 5804 (E:\PycharmProjects\demo\Demo7\sbt-sec-authen-author-session\target\classes started by Administrator in E:\PycharmProjects\demo\Demo7\sbt-sec-authen-author-session)
+2021-11-26 09:36:59.929  INFO 5804 --- [main] com.vae.Application                      : The following profiles are active: dev
+2021-11-26 09:37:01.714  INFO 5804 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2021-11-26 09:37:01.725  INFO 5804 --- [main] o.a.coyote.http11.Http11NioProtocol      : Initializing ProtocolHandler ["http-nio-8000"]
+2021-11-26 09:37:01.725  INFO 5804 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-26 09:37:01.726  INFO 5804 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
+2021-11-26 09:37:01.839  INFO 5804 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-26 09:37:01.839  INFO 5804 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1858 ms
+2021-11-26 09:37:02.849  INFO 5804 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@310a7859, org.springframework.security.web.context.SecurityContextPersistenceFilter@6af5b246, org.springframework.security.web.header.HeaderWriterFilter@ea7a4c3, org.springframework.web.filter.CorsFilter@1cbc1dde, org.springframework.security.web.authentication.logout.LogoutFilter@63a9c661, com.vae.configuration.spring.security.authentication.RestLoginAuthenticationFilter@7a6ea47d, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4e375bba, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@31723307, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2d7637e6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4971f459, org.springframework.security.web.session.SessionManagementFilter@7d42404e, org.springframework.security.web.access.ExceptionTranslationFilter@2e1eb85f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@79a201cf]
+2021-11-26 09:37:03.541  INFO 5804 --- [main] o.a.coyote.http11.Http11NioProtocol      : Starting ProtocolHandler ["http-nio-8000"]
+2021-11-26 09:37:03.569  INFO 5804 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8000 (http) with context path ''
+2021-11-26 09:37:03.585  INFO 5804 --- [main] com.vae.Application                      : Started Application in 4.47 seconds (JVM running for 6.044)
+2021-11-26 09:37:36.580  INFO 5656 --- [main] com.vae.Application                      : Starting Application using Java 1.8.0_281 on SKY-20210218KET with PID 5656 (E:\PycharmProjects\demo\Demo7\sbt-sec-authen-author-session\target\classes started by Administrator in E:\PycharmProjects\demo\Demo7\sbt-sec-authen-author-session)
+2021-11-26 09:37:36.585  INFO 5656 --- [main] com.vae.Application                      : The following profiles are active: dev
+2021-11-26 09:37:37.822  INFO 5656 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2021-11-26 09:37:37.831  INFO 5656 --- [main] o.a.coyote.http11.Http11NioProtocol      : Initializing ProtocolHandler ["http-nio-8000"]
+2021-11-26 09:37:37.832  INFO 5656 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-26 09:37:37.832  INFO 5656 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
+2021-11-26 09:37:37.921  INFO 5656 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-26 09:37:37.921  INFO 5656 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1280 ms
+2021-11-26 09:37:38.545  INFO 5656 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2b44d6d0, org.springframework.security.web.context.SecurityContextPersistenceFilter@2efd2f21, org.springframework.security.web.header.HeaderWriterFilter@7f42e06e, org.springframework.web.filter.CorsFilter@3e900e1a, org.springframework.security.web.authentication.logout.LogoutFilter@3421debd, com.vae.configuration.spring.security.authentication.RestLoginAuthenticationFilter@3135bf25, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@b4732dc, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@59c500f7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4db77402, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@196624bf, org.springframework.security.web.session.SessionManagementFilter@6ad179b4, org.springframework.security.web.access.ExceptionTranslationFilter@776015fc, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@faea4da]
+2021-11-26 09:37:38.885  INFO 5656 --- [main] o.a.coyote.http11.Http11NioProtocol      : Starting ProtocolHandler ["http-nio-8000"]
+2021-11-26 09:37:38.902  INFO 5656 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8000 (http) with context path ''
+2021-11-26 09:37:38.914  INFO 5656 --- [main] com.vae.Application                      : Started Application in 3.021 seconds (JVM running for 3.892)
+2021-11-26 09:38:56.236  INFO 1640 --- [main] com.vae.Application                      : Starting Application using Java 1.8.0_281 on SKY-20210218KET with PID 1640 (E:\PycharmProjects\demo\Demo7\sbt-sec-authen-author-session\target\classes started by Administrator in E:\PycharmProjects\demo\Demo7\sbt-sec-authen-author-session)
+2021-11-26 09:38:56.239  INFO 1640 --- [main] com.vae.Application                      : The following profiles are active: dev
+2021-11-26 09:38:57.603  INFO 1640 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2021-11-26 09:38:57.618  INFO 1640 --- [main] o.a.coyote.http11.Http11NioProtocol      : Initializing ProtocolHandler ["http-nio-8000"]
+2021-11-26 09:38:57.619  INFO 1640 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-26 09:38:57.619  INFO 1640 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
+2021-11-26 09:38:57.715  INFO 1640 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-26 09:38:57.715  INFO 1640 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1413 ms
+2021-11-26 09:38:58.025 ERROR 1640 --- [main] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'securityConfig' defined in file [E:\PycharmProjects\demo\Demo7\sbt-sec-authen-author-session\target\classes\com\vae\configuration\spring\security\SecurityConfig.class]: Unsatisfied dependency expressed through constructor parameter 7; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'securityConfig': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2021-11-26 09:38:58.049  INFO 1640 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-11-26 09:38:58.054  WARN 1640 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+2021-11-26 09:38:58.065  INFO 1640 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-11-26 09:38:58.080 ERROR 1640 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+┌──->──┐
+|  securityConfig defined in file [E:\PycharmProjects\demo\Demo7\sbt-sec-authen-author-session\target\classes\com\vae\configuration\spring\security\SecurityConfig.class]
+└──<-──┘
+
+
+2021-11-26 09:39:29.452  INFO 3612 --- [main] com.vae.Application                      : Starting Application using Java 1.8.0_281 on SKY-20210218KET with PID 3612 (E:\PycharmProjects\demo\Demo7\sbt-sec-authen-author-session\target\classes started by Administrator in E:\PycharmProjects\demo\Demo7\sbt-sec-authen-author-session)
+2021-11-26 09:39:29.459  INFO 3612 --- [main] com.vae.Application                      : The following profiles are active: dev
+2021-11-26 09:39:30.789  INFO 3612 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2021-11-26 09:39:30.799  INFO 3612 --- [main] o.a.coyote.http11.Http11NioProtocol      : Initializing ProtocolHandler ["http-nio-8000"]
+2021-11-26 09:39:30.799  INFO 3612 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-26 09:39:30.799  INFO 3612 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
+2021-11-26 09:39:30.889  INFO 3612 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-26 09:39:30.889  INFO 3612 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1377 ms
+2021-11-26 09:39:31.218 ERROR 3612 --- [main] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'securityConfig' defined in file [E:\PycharmProjects\demo\Demo7\sbt-sec-authen-author-session\target\classes\com\vae\configuration\spring\security\SecurityConfig.class]: Unsatisfied dependency expressed through constructor parameter 7; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'securityConfig': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2021-11-26 09:39:31.242  INFO 3612 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-11-26 09:39:31.249  WARN 3612 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+2021-11-26 09:39:31.260  INFO 3612 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-11-26 09:39:31.274 ERROR 3612 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+┌──->──┐
+|  securityConfig defined in file [E:\PycharmProjects\demo\Demo7\sbt-sec-authen-author-session\target\classes\com\vae\configuration\spring\security\SecurityConfig.class]
+└──<-──┘
+
+
+2021-11-26 10:19:26.942  INFO 9068 --- [main] com.vae.Application                      : Starting Application using Java 1.8.0_281 on SKY-20210218KET with PID 9068 (E:\PycharmProjects\demo\Demo7\sbt-sec-authen-author-session\target\classes started by Administrator in E:\PycharmProjects\demo\Demo7\sbt-sec-authen-author-session)
+2021-11-26 10:19:26.946  INFO 9068 --- [main] com.vae.Application                      : The following profiles are active: dev
+2021-11-26 10:19:28.355  INFO 9068 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2021-11-26 10:19:28.365  INFO 9068 --- [main] o.a.coyote.http11.Http11NioProtocol      : Initializing ProtocolHandler ["http-nio-8000"]
+2021-11-26 10:19:28.365  INFO 9068 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-26 10:19:28.366  INFO 9068 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
+2021-11-26 10:19:28.459  INFO 9068 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-26 10:19:28.460  INFO 9068 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1417 ms
+2021-11-26 10:19:28.774  INFO 9068 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: public java.util.Map com.vae.configuration.spring.security.authorization.RestSecurityService.loadDataSource()
+2021-11-26 10:19:28.846  INFO 9068 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-26 10:19:29.450  INFO 9068 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-11-26 10:19:29.994  INFO 9068 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@67b61834, org.springframework.security.web.context.SecurityContextPersistenceFilter@41e9f86, org.springframework.security.web.header.HeaderWriterFilter@20440c6c, org.springframework.web.filter.CorsFilter@3b0d3a63, org.springframework.security.web.authentication.logout.LogoutFilter@a0c5be, com.vae.configuration.spring.security.authentication.RestLoginAuthenticationFilter@498c535d, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@257f30f7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@233f52f8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2aa14ae6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@50598a1a, org.springframework.security.web.session.SessionManagementFilter@560271a1, org.springframework.security.web.access.ExceptionTranslationFilter@28fc1132, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@66f16742]
+2021-11-26 10:19:30.347  INFO 9068 --- [main] o.a.coyote.http11.Http11NioProtocol      : Starting ProtocolHandler ["http-nio-8000"]
+2021-11-26 10:19:30.364  INFO 9068 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8000 (http) with context path ''
+2021-11-26 10:19:30.377  INFO 9068 --- [main] com.vae.Application                      : Started Application in 4.132 seconds (JVM running for 4.928)
+2021-11-26 10:23:03.181  INFO 9068 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-11-26 10:23:03.203  INFO 9068 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-11-26 10:23:11.592  INFO 8984 --- [main] com.vae.Application                      : Starting Application using Java 1.8.0_281 on SKY-20210218KET with PID 8984 (E:\PycharmProjects\demo\Demo7\sbt-sec-authen-author-session\target\classes started by Administrator in E:\PycharmProjects\demo\Demo7\sbt-sec-authen-author-session)
+2021-11-26 10:23:11.595  INFO 8984 --- [main] com.vae.Application                      : The following profiles are active: dev
+2021-11-26 10:23:12.873  INFO 8984 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2021-11-26 10:23:12.883  INFO 8984 --- [main] o.a.coyote.http11.Http11NioProtocol      : Initializing ProtocolHandler ["http-nio-8000"]
+2021-11-26 10:23:12.883  INFO 8984 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-26 10:23:12.884  INFO 8984 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
+2021-11-26 10:23:12.993  INFO 8984 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-26 10:23:12.993  INFO 8984 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1322 ms
+2021-11-26 10:23:13.300 ERROR 8984 --- [main] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'securityConfig' defined in file [E:\PycharmProjects\demo\Demo7\sbt-sec-authen-author-session\target\classes\com\vae\configuration\spring\security\SecurityConfig.class]: Unsatisfied dependency expressed through constructor parameter 7; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'securityConfig': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2021-11-26 10:23:13.324  INFO 8984 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-11-26 10:23:13.329  WARN 8984 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+2021-11-26 10:23:13.339  INFO 8984 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-11-26 10:23:13.353 ERROR 8984 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+┌──->──┐
+|  securityConfig defined in file [E:\PycharmProjects\demo\Demo7\sbt-sec-authen-author-session\target\classes\com\vae\configuration\spring\security\SecurityConfig.class]
+└──<-──┘
+
+
+2021-11-26 10:32:35.041  INFO 9352 --- [main] com.vae.Application                      : Starting Application using Java 1.8.0_281 on SKY-20210218KET with PID 9352 (E:\PycharmProjects\demo\Demo7\sbt-sec-authen-author-session\target\classes started by Administrator in E:\PycharmProjects\demo\Demo7\sbt-sec-authen-author-session)
+2021-11-26 10:32:35.045  INFO 9352 --- [main] com.vae.Application                      : The following profiles are active: dev
+2021-11-26 10:32:36.744  INFO 9352 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2021-11-26 10:32:36.857  INFO 9352 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1743 ms
+2021-11-26 10:32:37.160  INFO 9352 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: public java.util.Map com.vae.configuration.spring.security.authorization.RestSecurityService.loadDataSource()
+2021-11-26 10:32:37.178  INFO 9352 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-26 10:32:37.396  INFO 9352 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-11-26 10:32:37.541 ERROR 9352 --- [main] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'restAuthorizationFilter': Unsatisfied dependency expressed through field 'restSecurityMetadataSource'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.vae.configuration.spring.security.authorization.RestSecurityMetadataSource' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2021-11-26 10:32:37.569  WARN 9352 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+2021-11-26 10:32:37.569  INFO 9352 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-11-26 10:32:37.573  INFO 9352 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-11-26 10:32:45.891  INFO 9232 --- [main] com.vae.Application                      : Starting Application using Java 1.8.0_281 on SKY-20210218KET with PID 9232 (E:\PycharmProjects\demo\Demo7\sbt-sec-authen-author-session\target\classes started by Administrator in E:\PycharmProjects\demo\Demo7\sbt-sec-authen-author-session)
+2021-11-26 10:32:45.895  INFO 9232 --- [main] com.vae.Application                      : The following profiles are active: dev
+2021-11-26 10:32:47.262  INFO 9232 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2021-11-26 10:32:47.272  INFO 9232 --- [main] o.a.coyote.http11.Http11NioProtocol      : Initializing ProtocolHandler ["http-nio-8000"]
+2021-11-26 10:32:47.273  INFO 9232 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-26 10:32:47.273  INFO 9232 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
+2021-11-26 10:32:47.387  INFO 9232 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-26 10:32:47.387  INFO 9232 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1403 ms
+2021-11-26 10:32:47.707  INFO 9232 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: public java.util.Map com.vae.configuration.spring.security.authorization.RestSecurityService.loadDataSource()
+2021-11-26 10:32:47.725  INFO 9232 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-26 10:32:47.903  INFO 9232 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-11-26 10:32:48.044 ERROR 9232 --- [main] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'restAuthorizationFilter': Unsatisfied dependency expressed through field 'restSecurityMetadataSource'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.vae.configuration.spring.security.authorization.RestSecurityMetadataSource' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2021-11-26 10:32:48.067  INFO 9232 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-11-26 10:32:48.071  WARN 9232 --- [main] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+2021-11-26 10:32:48.071  WARN 9232 --- [main] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-1 connection adder] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+2021-11-26 10:32:48.073  WARN 9232 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+2021-11-26 10:32:48.074  INFO 9232 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-11-26 10:32:48.078  INFO 9232 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-11-26 10:32:48.089  INFO 9232 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-11-26 10:32:48.113 ERROR 9232 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field restSecurityMetadataSource in com.vae.configuration.spring.security.authorization.RestAuthorizationFilter required a bean of type 'com.vae.configuration.spring.security.authorization.RestSecurityMetadataSource' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.vae.configuration.spring.security.authorization.RestSecurityMetadataSource' in your configuration.
+
+2021-11-26 10:33:15.655  INFO 6900 --- [main] com.vae.Application                      : Starting Application using Java 1.8.0_281 on SKY-20210218KET with PID 6900 (E:\PycharmProjects\demo\Demo7\sbt-sec-authen-author-session\target\classes started by Administrator in E:\PycharmProjects\demo\Demo7\sbt-sec-authen-author-session)
+2021-11-26 10:33:15.659  INFO 6900 --- [main] com.vae.Application                      : The following profiles are active: dev
+2021-11-26 10:33:17.102  INFO 6900 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2021-11-26 10:33:17.112  INFO 6900 --- [main] o.a.coyote.http11.Http11NioProtocol      : Initializing ProtocolHandler ["http-nio-8000"]
+2021-11-26 10:33:17.112  INFO 6900 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-26 10:33:17.113  INFO 6900 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
+2021-11-26 10:33:17.202  INFO 6900 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-26 10:33:17.203  INFO 6900 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1487 ms
+2021-11-26 10:33:17.510  INFO 6900 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: public java.util.Map com.vae.configuration.spring.security.authorization.RestSecurityService.loadDataSource()
+2021-11-26 10:33:17.528  INFO 6900 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-26 10:33:17.718  INFO 6900 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-11-26 10:33:17.855  WARN 6900 --- [main] c.v.c.s.s.a.RestAuthorizationFilter      : Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()
+2021-11-26 10:33:18.033  INFO 6900 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@706f6d26, org.springframework.security.web.context.SecurityContextPersistenceFilter@273fa9e, org.springframework.security.web.header.HeaderWriterFilter@4b957db0, org.springframework.web.filter.CorsFilter@3af2f846, org.springframework.security.web.authentication.logout.LogoutFilter@69ed5ea2, com.vae.configuration.spring.security.authentication.RestLoginAuthenticationFilter@bd3eff4, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5aa76ad2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7ab2a07e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@47044f7d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6af65f29, org.springframework.security.web.session.SessionManagementFilter@8840c98, org.springframework.security.web.access.ExceptionTranslationFilter@5c313224, com.vae.configuration.spring.security.authorization.RestAuthorizationFilter@4e140497, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@26e8ff8c]
+2021-11-26 10:33:18.387  INFO 6900 --- [main] o.a.coyote.http11.Http11NioProtocol      : Starting ProtocolHandler ["http-nio-8000"]
+2021-11-26 10:33:18.404  INFO 6900 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8000 (http) with context path ''
+2021-11-26 10:33:18.416  INFO 6900 --- [main] com.vae.Application                      : Started Application in 3.402 seconds (JVM running for 4.196)
+2021-11-26 10:33:21.687  INFO 6900 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-11-26 10:33:21.692  INFO 6900 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-11-26 10:34:41.390  INFO 3756 --- [main] com.vae.Application                      : Starting Application using Java 1.8.0_281 on SKY-20210218KET with PID 3756 (E:\PycharmProjects\demo\Demo7\sbt-sec-authen-author-session\target\classes started by Administrator in E:\PycharmProjects\demo\Demo7\sbt-sec-authen-author-session)
+2021-11-26 10:34:41.393  INFO 3756 --- [main] com.vae.Application                      : The following profiles are active: dev
+2021-11-26 10:34:42.598  INFO 3756 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2021-11-26 10:34:42.608  INFO 3756 --- [main] o.a.coyote.http11.Http11NioProtocol      : Initializing ProtocolHandler ["http-nio-8000"]
+2021-11-26 10:34:42.608  INFO 3756 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-26 10:34:42.609  INFO 3756 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
+2021-11-26 10:34:42.712  INFO 3756 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-26 10:34:42.713  INFO 3756 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1268 ms
+2021-11-26 10:34:43.026 ERROR 3756 --- [main] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'securityConfig' defined in file [E:\PycharmProjects\demo\Demo7\sbt-sec-authen-author-session\target\classes\com\vae\configuration\spring\security\SecurityConfig.class]: Unsatisfied dependency expressed through constructor parameter 7; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'securityConfig': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2021-11-26 10:34:43.050  INFO 3756 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-11-26 10:34:43.055  WARN 3756 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+2021-11-26 10:34:43.065  INFO 3756 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-11-26 10:34:43.079 ERROR 3756 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+┌──->──┐
+|  securityConfig defined in file [E:\PycharmProjects\demo\Demo7\sbt-sec-authen-author-session\target\classes\com\vae\configuration\spring\security\SecurityConfig.class]
+└──<-──┘
+
+
+2021-11-26 10:35:48.603  INFO 7348 --- [main] com.vae.Application                      : Starting Application using Java 1.8.0_281 on SKY-20210218KET with PID 7348 (E:\PycharmProjects\demo\Demo7\sbt-sec-authen-author-session\target\classes started by Administrator in E:\PycharmProjects\demo\Demo7\sbt-sec-authen-author-session)
+2021-11-26 10:35:48.607  INFO 7348 --- [main] com.vae.Application                      : The following profiles are active: dev
+2021-11-26 10:35:49.969  INFO 7348 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2021-11-26 10:35:49.978  INFO 7348 --- [main] o.a.coyote.http11.Http11NioProtocol      : Initializing ProtocolHandler ["http-nio-8000"]
+2021-11-26 10:35:49.979  INFO 7348 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-26 10:35:49.979  INFO 7348 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
+2021-11-26 10:35:50.085  INFO 7348 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-26 10:35:50.085  INFO 7348 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1364 ms
+2021-11-26 10:35:50.489  WARN 7348 --- [main] c.v.c.s.s.a.RestAuthorizationFilter      : Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()
+2021-11-26 10:35:50.730  INFO 7348 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@51a16adf, org.springframework.security.web.context.SecurityContextPersistenceFilter@4d4436d0, org.springframework.security.web.header.HeaderWriterFilter@ab2e6d2, org.springframework.web.filter.CorsFilter@385d819, org.springframework.security.web.authentication.logout.LogoutFilter@49cd946c, com.vae.configuration.spring.security.authentication.RestLoginAuthenticationFilter@343fddd9, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@a0bf272, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@39da5e49, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4b87074a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4315c28c, org.springframework.security.web.session.SessionManagementFilter@71664560, org.springframework.security.web.access.ExceptionTranslationFilter@4e375bba, com.vae.configuration.spring.security.authorization.RestAuthorizationFilter@104dc1a2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@415d88de]
+2021-11-26 10:35:51.068  INFO 7348 --- [main] o.a.coyote.http11.Http11NioProtocol      : Starting ProtocolHandler ["http-nio-8000"]
+2021-11-26 10:35:51.085  INFO 7348 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8000 (http) with context path ''
+2021-11-26 10:35:51.097  INFO 7348 --- [main] com.vae.Application                      : Started Application in 3.204 seconds (JVM running for 3.987)
+2021-11-26 10:59:09.607  INFO 2824 --- [main] com.vae.Application                      : Starting Application using Java 1.8.0_281 on SKY-20210218KET with PID 2824 (E:\PycharmProjects\demo\Demo7\sbt-sec-authen-author-session\target\classes started by Administrator in E:\PycharmProjects\demo\Demo7\sbt-sec-authen-author-session)
+2021-11-26 10:59:09.610  INFO 2824 --- [main] com.vae.Application                      : The following profiles are active: dev
+2021-11-26 10:59:10.850  INFO 2824 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2021-11-26 10:59:10.861  INFO 2824 --- [main] o.a.coyote.http11.Http11NioProtocol      : Initializing ProtocolHandler ["http-nio-8000"]
+2021-11-26 10:59:10.861  INFO 2824 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-26 10:59:10.862  INFO 2824 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
+2021-11-26 10:59:10.965  INFO 2824 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-26 10:59:10.966  INFO 2824 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1299 ms
+2021-11-26 10:59:11.278 ERROR 2824 --- [main] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'securityConfig' defined in file [E:\PycharmProjects\demo\Demo7\sbt-sec-authen-author-session\target\classes\com\vae\configuration\spring\security\SecurityConfig.class]: Unsatisfied dependency expressed through constructor parameter 7; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.vae.configuration.spring.security.authorization.RestSecurityService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2021-11-26 10:59:11.305  INFO 2824 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-11-26 10:59:11.309  WARN 2824 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+2021-11-26 10:59:11.320  INFO 2824 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-11-26 10:59:11.342 ERROR 2824 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 7 of constructor in com.vae.configuration.spring.security.SecurityConfig required a bean of type 'com.vae.configuration.spring.security.authorization.RestSecurityService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.vae.configuration.spring.security.authorization.RestSecurityService' in your configuration.
+
+2021-11-26 10:59:55.901  INFO 7204 --- [main] com.vae.Application                      : Starting Application using Java 1.8.0_281 on SKY-20210218KET with PID 7204 (E:\PycharmProjects\demo\Demo7\sbt-sec-authen-author-session\target\classes started by Administrator in E:\PycharmProjects\demo\Demo7\sbt-sec-authen-author-session)
+2021-11-26 10:59:55.904  INFO 7204 --- [main] com.vae.Application                      : The following profiles are active: dev
+2021-11-26 10:59:57.238  INFO 7204 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2021-11-26 10:59:57.247  INFO 7204 --- [main] o.a.coyote.http11.Http11NioProtocol      : Initializing ProtocolHandler ["http-nio-8000"]
+2021-11-26 10:59:57.248  INFO 7204 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-26 10:59:57.248  INFO 7204 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
+2021-11-26 10:59:57.359  INFO 7204 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-26 10:59:57.359  INFO 7204 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1399 ms
+2021-11-26 10:59:57.770  INFO 7204 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: public java.util.Map com.vae.configuration.spring.security.authorization.RestSecurityService.loadDataSource()
+2021-11-26 10:59:57.787  INFO 7204 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-26 10:59:57.959  INFO 7204 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-11-26 10:59:58.097  WARN 7204 --- [main] c.v.c.s.s.a.RestAuthorizationFilter      : Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()
+2021-11-26 10:59:58.269  INFO 7204 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@706f6d26, org.springframework.security.web.context.SecurityContextPersistenceFilter@273fa9e, org.springframework.security.web.header.HeaderWriterFilter@4b957db0, org.springframework.web.filter.CorsFilter@3af2f846, org.springframework.security.web.authentication.logout.LogoutFilter@69ed5ea2, com.vae.configuration.spring.security.authentication.RestLoginAuthenticationFilter@bd3eff4, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5aa76ad2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7ab2a07e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@47044f7d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6af65f29, org.springframework.security.web.session.SessionManagementFilter@8840c98, org.springframework.security.web.access.ExceptionTranslationFilter@5c313224, com.vae.configuration.spring.security.authorization.RestAuthorizationFilter@4e140497, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@26e8ff8c]
+2021-11-26 10:59:58.606  INFO 7204 --- [main] o.a.coyote.http11.Http11NioProtocol      : Starting ProtocolHandler ["http-nio-8000"]
+2021-11-26 10:59:58.623  INFO 7204 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8000 (http) with context path ''
+2021-11-26 10:59:58.635  INFO 7204 --- [main] com.vae.Application                      : Started Application in 3.418 seconds (JVM running for 4.245)
