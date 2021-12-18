@@ -14,16 +14,39 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 * */
 @Configuration
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+    // 3. 的代码
+//    @Override
+//    protected void configure(HttpSecurity http) throws Exception {
+//        http.authorizeHttpRequests()
+//                //2.设置自定义登录页面和请求不设置访问权限
+//                .antMatchers("/newlogin.html").permitAll()
+//                .antMatchers("/loginHandle").permitAll()
+//                .anyRequest().authenticated()
+//                .and()
+//                .formLogin()
+//                //1.设置自定义的登录页面
+//                .loginPage("/newlogin.html")
+//                .loginProcessingUrl("/loginHandle")
+//                .and()
+//                .csrf().disable();
+//
+//    }
+
+
+    // 4. 的代码
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeHttpRequests()
                 //2.设置自定义登录页面和请求不设置访问权限
                 .antMatchers("/newlogin.html").permitAll()
+                .antMatchers("/autho/admin/*").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
                 //1.设置自定义的登录页面
-                .loginPage("/newlogin.html");
+                .loginPage("/newlogin.html")
+                .and()
+                .csrf().disable();
 
     }
 }
