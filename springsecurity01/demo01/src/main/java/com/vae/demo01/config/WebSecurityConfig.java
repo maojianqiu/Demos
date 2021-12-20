@@ -7,7 +7,12 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
+import org.springframework.security.provisioning.JdbcUserDetailsManager;
+import sun.security.util.Password;
+
+import javax.sql.DataSource;
 
 /*
 * 如果你使用的依赖包是依赖于 spring-boot-starter-parent 的，就只用 @Configuration 注解即可。
@@ -58,11 +63,33 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf().disable();
     }
 
+//    基于默认内存模型的用户模式
+//    @Bean
+//    public UserDetailsService userDetailsService(){
+//        //实现了 UserDetailsService 接口，覆写了 loadUserByUsername()方法， 并添加了创建用户的方法
+//        InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
+//        //创建用户，User 类继承了 UserDetails 接口，并提供了创建方法
+//        manager.createUser(User.withUsername("admin").password(new BCryptPasswordEncoder().encode("123456")).roles("ADMIN").build());
+//        manager.createUser(User.withUsername("user").password(new BCryptPasswordEncoder().encode("123456")).roles("USER").build());
+//        return manager;
+//    }
+
     @Bean
-    public UserDetailsService userDetailsService(){
-        InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
-        manager.createUser(User.withUsername("admin").password("123456").roles("ADMIN").build());
-        manager.createUser(User.withUsername("user").password("123456").roles("user").build());
-        return manager;
+    public BCryptPasswordEncoder password(){
+        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+        return passwordEncoder;
+    }
+
+//    基于默认数据库模型的用户模式
+    @Bean
+    public UserDetailsService userDetailsService(DataSource dataSource){
+        JdbcUserDetailsManager manager = new JdbcUserDetailsManager();
+        manager.setDataSource(dataSource);
+        if(!manager.userExists("admin")){
+            //下面的创建用户就相当于通过 jdbc 调用 mysql 的 insert
+            manager.createUser(User.withUsername("admin").password(new BCryptPasswordEncoder().encode("123456")).roles("ADMIN").build());
+        }
+
+       return  manager;
     }
 }
