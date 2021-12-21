@@ -81,15 +81,15 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
 //    基于默认数据库模型的用户模式
-    @Bean
-    public UserDetailsService userDetailsService(DataSource dataSource){
-        JdbcUserDetailsManager manager = new JdbcUserDetailsManager();
-        manager.setDataSource(dataSource);
-        if(!manager.userExists("admin")){
-            //下面的创建用户就相当于通过 jdbc 调用 mysql 的 insert
-            manager.createUser(User.withUsername("admin").password(new BCryptPasswordEncoder().encode("123456")).roles("ADMIN").build());
-        }
-
-       return  manager;
-    }
+//    @Bean
+//    public UserDetailsService userDetailsService(DataSource dataSource){
+//        JdbcUserDetailsManager manager = new JdbcUserDetailsManager();
+//        manager.setDataSource(dataSource);
+//        if(!manager.userExists("admin")){
+//            //下面的创建用户就相当于通过 jdbc 调用 mysql 的 insert
+//            manager.createUser(User.withUsername("admin").password(new BCryptPasswordEncoder().encode("123456")).roles("ADMIN").build());
+//        }
+//
+//       return  manager;
+//    }
 }
