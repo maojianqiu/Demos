@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace 必须填写对应的映射接口的 全限定类名-->
 <mapper namespace="com.vae.demo01.mapper.UserMapper">
+  <!--
+    resultMap 代表从数据库中获取数据后返回的数据类型，mybatis会将数据封装成对应的对象，
+    这里的 type 必须也写对应对象的全限定类名
+  -->
   <resultMap id="BaseResultMap" type="com.vae.demo01.entity.User">
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="user_name" jdbcType="VARCHAR" property="username" />
     <result column="password" jdbcType="VARCHAR" property="password" />
-    <result column="role" jdbcType="INTEGER" property="roles" />
+    <result column="roles" jdbcType="VARCHAR" property="roles" />
     <result column="status" jdbcType="INTEGER" property="enable" />
   </resultMap>
 
@@ -16,10 +21,15 @@
   <select id="getUserInfo" parameterType="String" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List" />
-    from users4-2
-    where username = #{username,jdbcType=VARCHAR}
+    from users4_2
+    where user_name = #{username,jdbcType=VARCHAR}
   </select>
-  <!--<delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">-->
+
+</mapper>
+
+
+
+        <!--<delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">-->
     <!--delete from authen_session_user-->
     <!--where id = #{id,jdbcType=INTEGER}-->
   <!--</delete>-->
@@ -399,4 +409,3 @@
   <!--</select>-->
 
 
-</mapper>

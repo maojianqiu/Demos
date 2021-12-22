@@ -63,6 +63,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf().disable();
     }
 
+    @Bean
+    public BCryptPasswordEncoder password(){
+        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+        return passwordEncoder;
+    }
+
 //    基于默认内存模型的用户模式
 //    @Bean
 //    public UserDetailsService userDetailsService(){
@@ -74,11 +80,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 //        return manager;
 //    }
 
-    @Bean
-    public BCryptPasswordEncoder password(){
-        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-        return passwordEncoder;
-    }
 
 //    基于默认数据库模型的用户模式
 //    @Bean
