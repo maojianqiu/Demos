@@ -24,30 +24,12 @@ import javax.sql.DataSource;
 * */
 @Configuration
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
-    //-------------------------------------------------------------------------------------------------------
-    // 3. 的代码
-//    @Override
-//    protected void configure(HttpSecurity http) throws Exception {
-//        http.authorizeHttpRequests()
-//                //2.设置自定义登录页面和请求不设置访问权限
-//                .antMatchers("/newlogin.html").permitAll()
-//                .antMatchers("/loginHandle").permitAll()
-//                .anyRequest().authenticated()
-//                .and()
-//                .formLogin()
-//                //1.设置自定义的登录页面
-//                .loginPage("/newlogin.html")
-//                .loginProcessingUrl("/loginHandle")
-//                .and()
-//                .csrf().disable();
-//
-//    }
 
-    //-------------------------------------------------------------------------------------------------------
-    // 4. 的代码
+
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeHttpRequests()
+//        http.authorizeHttpRequests()   http.authorizeRequests()  区别？
+        http.authorizeRequests()
                 //设置自定义登录页面和请求不设置访问权限
                 .antMatchers("/newlogin.html").permitAll()
                 //设置游客、admin、user访问的权限，.hasRole(Str) 方法是给匹配的路径设置角色，当用户有这个角色时就可以访问这个路径。
@@ -69,28 +51,5 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         return passwordEncoder;
     }
 
-//    基于默认内存模型的用户模式
-//    @Bean
-//    public UserDetailsService userDetailsService(){
-//        //实现了 UserDetailsService 接口，覆写了 loadUserByUsername()方法， 并添加了创建用户的方法
-//        InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
-//        //创建用户，User 类继承了 UserDetails 接口，并提供了创建方法
-//        manager.createUser(User.withUsername("admin").password(new BCryptPasswordEncoder().encode("123456")).roles("ADMIN").build());
-//        manager.createUser(User.withUsername("user").password(new BCryptPasswordEncoder().encode("123456")).roles("USER").build());
-//        return manager;
-//    }
 
-
-//    基于默认数据库模型的用户模式
-//    @Bean
-//    public UserDetailsService userDetailsService(DataSource dataSource){
-//        JdbcUserDetailsManager manager = new JdbcUserDetailsManager();
-//        manager.setDataSource(dataSource);
-//        if(!manager.userExists("admin")){
-//            //下面的创建用户就相当于通过 jdbc 调用 mysql 的 insert
-//            manager.createUser(User.withUsername("admin").password(new BCryptPasswordEncoder().encode("123456")).roles("ADMIN").build());
-//        }
-//
-//       return  manager;
-//    }
 }
