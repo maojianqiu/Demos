@@ -41,6 +41,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .formLogin()
                 //设置自定义的登录页面
                 .loginPage("/newlogin.html")
+//                .loginProcessingUrl("login001")
                 .and()
                 .csrf().disable();
     }
