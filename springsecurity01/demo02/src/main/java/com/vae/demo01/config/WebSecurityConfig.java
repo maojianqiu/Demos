@@ -1,15 +1,18 @@
 package com.vae.demo01.config;
 
+import com.vae.demo01.filter.PhonePasswordFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.parameters.P;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.provisioning.JdbcUserDetailsManager;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import sun.security.util.Password;
 
 import javax.sql.DataSource;
@@ -28,20 +31,22 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-//        http.authorizeHttpRequests()   http.authorizeRequests()  区别？
+
+        //addFilter 就是添加过滤器的，我们直接添加到默认的 UsernamePasswordAuthenticationFilter 前面。
+        http.addFilterBefore(phonePasswordFilter(),UsernamePasswordAuthenticationFilter.class);
+
         http.authorizeRequests()
-                //设置自定义登录页面和请求不设置访问权限
+
                 .antMatchers("/newlogin.html").permitAll()
-                //设置游客、admin、user访问的权限，.hasRole(Str) 方法是给匹配的路径设置角色，当用户有这个角色时就可以访问这个路径。
+                //设置自定义手机号码登录请求不设置访问权限
+                .antMatchers("/phoneUrl").permitAll()
                 .antMatchers("/autho/all/**").permitAll()
                 .antMatchers("/autho/admin/**").hasRole("ADMIN")
                 .antMatchers("/autho/user/**").hasRole("USER")
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
-                //设置自定义的登录页面
                 .loginPage("/newlogin.html")
-//                .loginProcessingUrl("login001")
                 .and()
                 .csrf().disable();
     }
@@ -53,4 +58,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
 
+    @Bean
+    public PhonePasswordFilter phonePasswordFilter() throws Exception {
+        PhonePasswordFilter phonePasswordFilter = new PhonePasswordFilter("/phoneUrl");
+        //这里需要给自定义的Filter注入 AuthenticationManager，是调用 WebSecurityConfigurerAdapter 的方法！
+        phonePasswordFilter.setAuthenticationManager(authenticationManagerBean());
+        return phonePasswordFilter;
+    }
 }
