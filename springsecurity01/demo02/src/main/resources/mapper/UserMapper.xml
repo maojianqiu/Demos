@@ -11,11 +11,12 @@
     <result column="user_name" jdbcType="VARCHAR" property="username" />
     <result column="password" jdbcType="VARCHAR" property="password" />
     <result column="roles" jdbcType="VARCHAR" property="roles" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
     <result column="status" jdbcType="INTEGER" property="enable" />
   </resultMap>
 
   <sql id="Base_Column_List">
-    id, user_name, password, roles, status
+    id, user_name, password, roles, status , phone
   </sql>
 
   <select id="getUserInfo" parameterType="String" resultMap="BaseResultMap">
@@ -23,6 +24,13 @@
     <include refid="Base_Column_List" />
     from users4_2
     where user_name = #{username,jdbcType=VARCHAR}
+  </select>
+
+  <select id="getUserInfoByPhone" parameterType="String" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from users4_2
+    where phone = #{phone,jdbcType=VARCHAR}
   </select>
 
 </mapper>

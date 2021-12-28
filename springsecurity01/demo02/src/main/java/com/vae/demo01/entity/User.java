@@ -22,6 +22,8 @@ public class User implements UserDetails {
 
     private String roles;
 
+    private String phone;
+
     private Boolean enable;
 
     private List<GrantedAuthority> authorities;
@@ -56,6 +58,14 @@ public class User implements UserDetails {
 
     public void setEnable(Boolean enable) {
         this.enable = enable;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     public void setAuthorities(List<GrantedAuthority> authorities) {

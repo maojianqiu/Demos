@@ -1,8 +1,11 @@
 package com.vae.demo01.config;
 
+import com.vae.demo01.base.PhoneAuthenticationProvider;
 import com.vae.demo01.filter.PhonePasswordFilter;
+import com.vae.demo01.service.MyUserDetailsService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authentication.ProviderManager;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.parameters.P;
@@ -16,6 +19,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 import sun.security.util.Password;
 
 import javax.sql.DataSource;
+import java.util.Collections;
 
 /*
 * 如果你使用的依赖包是依赖于 spring-boot-starter-parent 的，就只用 @Configuration 注解即可。
@@ -32,8 +36,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 
-        //addFilter 就是添加过滤器的，我们直接添加到默认的 UsernamePasswordAuthenticationFilter 前面。
-        http.addFilterBefore(phonePasswordFilter(),UsernamePasswordAuthenticationFilter.class);
+
+        http
+                //addFilter 就是添加过滤器的，我们直接添加到默认的 UsernamePasswordAuthenticationFilter 前面。
+                .addFilterBefore(getPhonePasswordFilter(),UsernamePasswordAuthenticationFilter.class);
+
+                //这里添加自定义的 Povider，是直接加到第一个调用的 AuthenticationManager#providers里面，并且 parent 里面的 providers 也是这个；
+                //.authenticationProvider(getPhoneAuthenticationProvider()).userDetailsService(getUserDetailsService());
 
         http.authorizeRequests()
 
@@ -52,17 +61,29 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
     @Bean
-    public BCryptPasswordEncoder password(){
+    public BCryptPasswordEncoder getPasswordEncoder(){
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
         return passwordEncoder;
     }
 
+    @Bean
+    public MyUserDetailsService getUserDetailsService(){
+        return new MyUserDetailsService();
+    }
 
     @Bean
-    public PhonePasswordFilter phonePasswordFilter() throws Exception {
+    public PhonePasswordFilter getPhonePasswordFilter() throws Exception {
         PhonePasswordFilter phonePasswordFilter = new PhonePasswordFilter("/phoneUrl");
+        //给 providerManager 添加 provider,这里是添加到最后一个 AuthenticationManager#providers 里面，也就是会通过 parent 调用。
+        ProviderManager providerManager =
+                new ProviderManager(Collections.singletonList(getPhoneAuthenticationProvider()));
         //这里需要给自定义的Filter注入 AuthenticationManager，是调用 WebSecurityConfigurerAdapter 的方法！
-        phonePasswordFilter.setAuthenticationManager(authenticationManagerBean());
+        phonePasswordFilter.setAuthenticationManager(providerManager);
         return phonePasswordFilter;
+    }
+
+    @Bean
+    public PhoneAuthenticationProvider getPhoneAuthenticationProvider(){
+        return new PhoneAuthenticationProvider();
     }
 }

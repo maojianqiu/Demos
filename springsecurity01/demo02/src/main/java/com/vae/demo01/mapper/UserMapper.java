@@ -8,4 +8,6 @@ import org.apache.ibatis.annotations.Select;
 public interface UserMapper {
 
     User getUserInfo(String username);
+
+    User getUserInfoByPhone(String phone);
 }
