@@ -22,14 +22,10 @@ import java.io.IOException;
  */
 public class PhonePasswordFilter extends AbstractAuthenticationProcessingFilter {
 
-//    @Value("${security.phone-url}")
-//    private static String PHONE_URL;
-
     //定义前端 form 表单传数值时，存到request中的参数名称，一般是 form 表单中的标签的 name 值。
     public static final String SPRING_SECURITY_FORM_PHONE_KEY = "phone";
 
     public static final String SPRING_SECURITY_FORM_PASSWORD_KEY = "password";
-
 
     private boolean postOnly = true;
 

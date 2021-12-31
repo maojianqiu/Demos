@@ -55,7 +55,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 //注意：添加自定义provider 之后，security 配置时就不会注入 DaoAuthenticationProvider 了，如果还想使用，就调用下方代码；
                 .userDetailsService(getUserDetailsService())
 
-            //addFilter 就是添加过滤器的，我们直接添加到默认的 UsernamePasswordAuthenticationFilter 前面。
+                //addFilter 就是添加过滤器的，我们直接添加到默认的 UsernamePasswordAuthenticationFilter 前面。
                 .addFilterBefore(getPhonePasswordFilter(),UsernamePasswordAuthenticationFilter.class);
 
         http.authorizeRequests()
@@ -108,8 +108,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
          * 也就是自定义的 PhonePasswordFilter 里面的 AuthenticationManager 对象里面的 provider 只有注入的 PhoneAuthenticationProvider，并且没有 parent!，
          * 而 security 默认的 AuthenticationManager ，如 UsernamePasswordAuthenticationFilter 里面的 AuthenticationManager 对象里面的 provider 还是只有默认的 Provider ，并且 parent 里面的 provider 是有 PhoneAuthenticationProvider（是通过 Adapter 自动注入的），但是 parent 与这里创建的 AuthenticationManager 是两个对象！
          */
-//        ProviderManager providerManager = new ProviderManager(Collections.singletonList(getPhoneAuthenticationProvider()));
-//        phonePasswordFilter.setAuthenticationManager(providerManager);
+        ProviderManager providerManager = new ProviderManager(Collections.singletonList(getPhoneAuthenticationProvider()));
+        phonePasswordFilter.setAuthenticationManager(providerManager);
 
         /**
          * 方式 3：这会通过 WebSecurityConfigurerAdapter 创建一个 AuthenticationManager ，在这儿之后的 WebSecurityConfigurerAdapter # getHttp() 方法也会创建一个 security 默认的 AuthenticationManager，并且会将我们这里创建的 AuthenticationManager 作为 parent 加入到默认的 AuthenticationManager里面。这两个manager之间是有关系的！
@@ -117,12 +117,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
          *      而 security 默认的 AuthenticationManager ，如 UsernamePasswordAuthenticationFilter 里面的 AuthenticationManager 对象里面的 provider 还是只有默认的 Provider ，但是 parent 里面的 provider 是有 PhoneAuthenticationProvider，并且 parent 就是这里创建的 AuthenticationManager ！
          */
         //我们直接在这里添加，使用 authenticationManager()，这样就不用创建多个 provider 对象了，并且也不会影响默认的 UsernamePasswordAuthenticationFilter 的 manager
-        phonePasswordFilter.setAuthenticationManager(authenticationManager());
+//        phonePasswordFilter.setAuthenticationManager(authenticationManager());
 
         return phonePasswordFilter;
     }
-
-
 
 
 }
