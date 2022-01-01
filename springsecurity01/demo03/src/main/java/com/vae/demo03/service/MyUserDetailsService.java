@@ -25,41 +25,40 @@ public class MyUserDetailsService implements UserDetailsService {
     @Autowired
     UserMapper userMapper;
 
+    @Autowired
+    private UmsAdminRoleRelationDao adminRoleRelationDao;
+
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        //从持久层获取数据
         User user = userMapper.getUserInfo(username);
 
         if(user == null){
-            //这是 security 自带的异常，会在过滤连中捕捉到
             throw new UsernameNotFoundException("用户不存在！");
 
         }
+        List<UmsResource> resourceList = getResourceList(user.getId());
 
-        //现在 user 对象里面的 roles 是 string 类型，并且用逗号隔开的，我们需要将 roles 设置到 authorities 类型中。
-        //我们需要把他修改为 security 可识别的权限类型 ，GrantedAuthority 接口是 security 保存权限的类型，SimpleGrantedAuthority 是它的实现类，也是security 最常使用的。
-        //AuthorityUtils.commaSeparatedStringToAuthorityList( String )是 security 提供的用于将逗号隔开的权限字符串切割成权限列表。
         user.setAuthorities(AuthorityUtils.commaSeparatedStringToAuthorityList(user.getRoles()));
 
         return user;
     }
 
-    //通过 phone 获取用户信息，前提手机号码能定位唯一用户
     public UserDetails loadUserByPhone(String phone) throws UsernameNotFoundException {
-        //从持久层获取数据
         User user = userMapper.getUserInfoByPhone(phone);
 
         if(user == null){
-            //这是 security 自带的异常，会在过滤连中捕捉到
             throw new UsernameNotFoundException("用户不存在！");
         }
 
-        //现在 user 对象里面的 roles 是 string 类型，并且用逗号隔开的，我们需要将 roles 设置到 authorities 类型中。
-        //我们需要把他修改为 security 可识别的权限类型 ，GrantedAuthority 接口是 security 保存权限的类型，SimpleGrantedAuthority 是它的实现类，也是security 最常使用的。
-        //AuthorityUtils.commaSeparatedStringToAuthorityList( String )是 security 提供的用于将逗号隔开的权限字符串切割成权限列表。
         user.setAuthorities(AuthorityUtils.commaSeparatedStringToAuthorityList(user.getRoles()));
 
         return user;
+    }
+
+    public List<UmsResource> getResourceList(Long adminId) {
+        List<UmsResource> resourceList;
+        resourceList = adminRoleRelationDao.getResourceList(adminId);
+        return resourceList;
     }
 
     //自定义的切割权限字符串的方法

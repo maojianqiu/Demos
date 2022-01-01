@@ -14,63 +14,9 @@ import java.util.List;
  */
 public class User implements UserDetails {
 
-    private Long id;
-
-    private String username;
-
-    private String password;
-
-    private String roles;
-
-    private String phone;
-
-    private Boolean enable;
+    private UmsAdmin umsAdmin;
 
     private List<GrantedAuthority> authorities;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getRoles() {
-        return roles;
-    }
-
-    public void setRoles(String roles) {
-        this.roles = roles;
-    }
-
-    public Boolean getEnable() {
-        return enable;
-    }
-
-    public void setEnable(Boolean enable) {
-        this.enable = enable;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
-    public void setAuthorities(List<GrantedAuthority> authorities) {
-        this.authorities = authorities;
-    }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -79,12 +25,12 @@ public class User implements UserDetails {
 
     @Override
     public String getPassword() {
-        return this.password;
+        return umsAdmin.getPassword();
     }
 
     @Override
     public String getUsername() {
-        return this.username;
+        return umsAdmin.getUsername();
     }
 
     @Override
@@ -104,6 +50,6 @@ public class User implements UserDetails {
 
     @Override
     public boolean isEnabled() {
-        return this.enable;
+        return umsAdmin.getStatus()== 1? true : false;
     }
 }
