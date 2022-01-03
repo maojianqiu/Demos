@@ -1,10 +1,12 @@
 package com.vae.demo03.entity;
 
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * description: User <br>
@@ -16,11 +18,19 @@ public class User implements UserDetails {
 
     private UmsAdmin umsAdmin;
 
-    private List<GrantedAuthority> authorities;
+    private List<UmsResource> resourceList;
+
+    public User(UmsAdmin umsAdmin, List<UmsResource> resourceList) {
+        this.umsAdmin = umsAdmin;
+        this.resourceList = resourceList;
+    }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return this.authorities;
+        //返回当前用户的角色
+        return resourceList.stream()
+                .map(resource -> new SimpleGrantedAuthority(resource.getUrl()))
+                .collect(Collectors.toList());
     }
 
     @Override

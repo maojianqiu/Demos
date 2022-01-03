@@ -10,6 +10,6 @@ import org.springframework.context.annotation.Configuration;
  * version: 1.0 <br>
  */
 @Configuration
-@MapperScan("com.vae.demo03.mapper")
+@MapperScan({"com.vae.demo03.mapper","com.vae.demo03.dao"})
 public class MybatisConfig {
 }

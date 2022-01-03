@@ -1,6 +1,11 @@
 package com.vae.demo03.service;
 
+import com.vae.demo03.dao.UmsAdminRoleRelationDao;
+import com.vae.demo03.entity.UmsAdmin;
+import com.vae.demo03.entity.UmsAdminExample;
+import com.vae.demo03.entity.UmsResource;
 import com.vae.demo03.entity.User;
+import com.vae.demo03.mapper.UmsAdminMapper;
 import com.vae.demo03.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
@@ -23,34 +28,44 @@ import java.util.List;
 public class MyUserDetailsService implements UserDetailsService {
 
     @Autowired
-    UserMapper userMapper;
+    UmsAdminMapper umsAdminMapper;
 
     @Autowired
     private UmsAdminRoleRelationDao adminRoleRelationDao;
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        User user = userMapper.getUserInfo(username);
-
-        if(user == null){
+        //使用 mybatis 的 Criteria 操作数据库
+        UmsAdminExample umsAdminExample = new UmsAdminExample();
+        umsAdminExample.createCriteria().andUsernameEqualTo(username);
+        List<UmsAdmin>  lists = umsAdminMapper.selectByExample(umsAdminExample);
+        if(lists.size() < 0){
             throw new UsernameNotFoundException("用户不存在！");
-
         }
-        List<UmsResource> resourceList = getResourceList(user.getId());
+        UmsAdmin umsAdmin = lists.get(0);
 
-        user.setAuthorities(AuthorityUtils.commaSeparatedStringToAuthorityList(user.getRoles()));
+        //设计到表关联获取，自己写 SQL，因为使用的是角色、资源、用户的授权模式，用户有对应的角色，查询到角色后在查询角色对应的权限
+        List<UmsResource> resourceList = getResourceList(umsAdmin.getId());
+
+        User user = new User(umsAdmin,resourceList);
 
         return user;
     }
 
     public UserDetails loadUserByPhone(String phone) throws UsernameNotFoundException {
-        User user = userMapper.getUserInfoByPhone(phone);
-
-        if(user == null){
+        //使用 mybatis 的 Criteria 操作数据库
+        UmsAdminExample umsAdminExample = new UmsAdminExample();
+        umsAdminExample.createCriteria().andPhoneEqualTo(phone);
+        List<UmsAdmin>  lists = umsAdminMapper.selectByExample(umsAdminExample);
+        if(lists.size() < 0){
             throw new UsernameNotFoundException("用户不存在！");
         }
+        UmsAdmin umsAdmin = lists.get(0);
 
-        user.setAuthorities(AuthorityUtils.commaSeparatedStringToAuthorityList(user.getRoles()));
+        //设计到表关联获取，自己写 SQL，因为使用的是角色、资源、用户的授权模式，用户有对应的角色，查询到角色后在查询角色对应的权限
+        List<UmsResource> resourceList = getResourceList(umsAdmin.getId());
+
+        User user = new User(umsAdmin,resourceList);
 
         return user;
     }
@@ -61,20 +76,5 @@ public class MyUserDetailsService implements UserDetailsService {
         return resourceList;
     }
 
-    //自定义的切割权限字符串的方法
-    public static List<GrantedAuthority> generateAuthorityList(String authority) {
-        List<GrantedAuthority> grantedAuthorities = new ArrayList();
-        String[] roles = authority.split(":");
-
-        if(roles != null || "".equals(roles)){
-            for(String role : roles) {
-                //把每个角色都封装成 SimpleGrantedAuthority 对象
-                grantedAuthorities.add(new SimpleGrantedAuthority(role));
-            }
-        }
-
-
-        return grantedAuthorities;
-    }
 
 }
