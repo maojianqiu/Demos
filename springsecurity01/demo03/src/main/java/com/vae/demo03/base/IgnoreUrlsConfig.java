@@ -1,6 +1,7 @@
 package com.vae.demo03.base;
 
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 import java.util.ArrayList;
@@ -11,11 +12,10 @@ import java.util.List;
  * Created by macro on 2018/11/5.
  */
 
-@ConfigurationProperties(prefix = "secure.ignored")
+//@ConfigurationProperties(prefix = "secure.ignored")
 //指明要加载哪个bean
 public class IgnoreUrlsConfig {
 
-    private List<String> urls = new ArrayList<>();
 
 
 }

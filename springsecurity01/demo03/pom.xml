@@ -72,10 +72,17 @@
             <scope>test</scope>
         </dependency>
 
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.boot</groupId>-->
+            <!--<artifactId>spring-boot-configuration-processor</artifactId>-->
+            <!--<optional>true</optional>-->
+        <!--</dependency>-->
+
+        <!--Hutool Java工具包-->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-configuration-processor</artifactId>
-            <optional>true</optional>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>4.5.7</version>
         </dependency>
     </dependencies>
 

@@ -1,13 +1,13 @@
 package com.vae.demo03.service;
 
 import com.vae.demo03.dao.UmsAdminRoleRelationDao;
-import com.vae.demo03.entity.UmsAdmin;
-import com.vae.demo03.entity.UmsAdminExample;
-import com.vae.demo03.entity.UmsResource;
-import com.vae.demo03.entity.User;
+import com.vae.demo03.entity.*;
 import com.vae.demo03.mapper.UmsAdminMapper;
+import com.vae.demo03.mapper.UmsResourceMapper;
 import com.vae.demo03.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.security.access.ConfigAttribute;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -17,6 +17,8 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * description: MyUserDetailsService <br>
@@ -32,6 +34,9 @@ public class MyUserDetailsService implements UserDetailsService {
 
     @Autowired
     private UmsAdminRoleRelationDao adminRoleRelationDao;
+
+    @Autowired
+    private UmsResourceMapper umsResourceMapper;
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
@@ -76,5 +81,14 @@ public class MyUserDetailsService implements UserDetailsService {
         return resourceList;
     }
 
+
+    public Map<String, ConfigAttribute> loadDataSource() {
+        Map<String, ConfigAttribute> map = new ConcurrentHashMap<>();
+        List<UmsResource> resourceList = umsResourceMapper.selectByExample(new UmsResourceExample());
+        for (UmsResource resource : resourceList) {
+            map.put(resource.getUrl(), new org.springframework.security.access.SecurityConfig(resource.getUrl()));
+        }
+        return map;
+    }
 
 }
