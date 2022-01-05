@@ -77,7 +77,7 @@ public class MyUserDetailsService implements UserDetailsService {
 
     public List<UmsResource> getResourceList(Long adminId) {
         List<UmsResource> resourceList;
-        resourceList = adminRoleRelationDao.getResourceList(adminId);
+        resourceList = adminRoleRelationDao.getResourceListByUid(adminId);
         return resourceList;
     }
 
