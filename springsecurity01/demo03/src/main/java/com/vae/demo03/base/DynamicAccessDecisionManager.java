@@ -16,6 +16,12 @@ import java.util.Iterator;
  */
 public class DynamicAccessDecisionManager implements AccessDecisionManager {
 
+    /**
+     *
+     * @param authentication 当前用户信息
+     * @param object
+     * @param configAttributes 平台权限集合
+     */
     @Override
     public void decide(Authentication authentication, Object object,
                        Collection<ConfigAttribute> configAttributes) throws AccessDeniedException, InsufficientAuthenticationException {
@@ -25,7 +31,6 @@ public class DynamicAccessDecisionManager implements AccessDecisionManager {
         }
         Iterator<ConfigAttribute> iterator = configAttributes.iterator();
 
-
         while (iterator.hasNext()) {
             ConfigAttribute configAttribute = iterator.next();
             //将访问所需资源或用户拥有资源进行比对
@@ -33,10 +38,12 @@ public class DynamicAccessDecisionManager implements AccessDecisionManager {
 
             for (GrantedAuthority grantedAuthority : authentication.getAuthorities()) {
                 if (needAuthority.trim().equals(grantedAuthority.getAuthority())) {
+                    //若匹配到一个权限，则直接返回
                     return;
                 }
             }
         }
+        //若没有权限则提示
         throw new AccessDeniedException("抱歉，您没有访问权限");
     }
 

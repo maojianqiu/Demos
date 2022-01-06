@@ -17,24 +17,29 @@ import java.util.*;
  */
 public class DynamicSecurityMetadataSource implements FilterInvocationSecurityMetadataSource {
 
+    //存储当前平台所有权限列表
     private static Map<String, ConfigAttribute> configAttributeMap = null;
+
+    //注入加载平台权限的业务类
     @Autowired
     private MyUserDetailsService myUserDetailsService;
 
-    @PostConstruct
+    //加载平台权限
     public void loadDataSource() {
         configAttributeMap = myUserDetailsService.loadDataSource();
     }
 
+    //清除平台权限，如果权限又新增了，那么需要清空这里的权限
     public void clearDataSource() {
         configAttributeMap.clear();
         configAttributeMap = null;
     }
 
+    //根据当前访问请求判断所需要的权限集合
     @Override
     public Collection<ConfigAttribute> getAttributes(Object o) throws IllegalArgumentException {
+        //判断是否有平台权限列表
         if (configAttributeMap == null) this.loadDataSource();
-        System.out.println("DynamicSecurityMetadataSource : " + configAttributeMap.toString());
 
         List<ConfigAttribute> configAttributes = new ArrayList<>();
         //获取当前访问的路径
@@ -64,7 +69,6 @@ public class DynamicSecurityMetadataSource implements FilterInvocationSecurityMe
 
     @Override
     public boolean supports(Class<?> aClass) {
-        return true;
+        return false;
     }
-
 }
