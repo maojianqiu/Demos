@@ -24,8 +24,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-
-
         http
                 .authenticationProvider(getPhoneAuthenticationProvider())
                 .userDetailsService(getUserDetailsService())
@@ -33,12 +31,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .addFilterBefore(getDynamicSecurityFilter(), FilterSecurityInterceptor.class);
 
         http.authorizeRequests()
-
-//                .antMatchers("/newlogin.html").permitAll()
-//                .antMatchers("/phoneUrl").permitAll()
-//                .antMatchers("/autho/all/**").permitAll()
-//                .antMatchers("/autho/admin/**").hasRole("ADMIN")
-//                .antMatchers("/autho/user/**").hasRole("USER")
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()

@@ -61,8 +61,6 @@ public class Dynamic01FilterSecurityInterceptor extends FilterSecurityIntercepto
         if ((fi.getRequest() != null)
                 && (fi.getRequest().getAttribute(FILTER_APPLIED) != null)
                 && isObserveOncePerRequest()) {
-            // filter already applied to this request and user wants us to observe
-            // once-per-request handling, so don't re-do security checking
             fi.getChain().doFilter(fi.getRequest(), fi.getResponse());
 
             logger.info("request " + fi.getRequestUrl() + " has already been security checking.");
